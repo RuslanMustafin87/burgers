@@ -1,18 +1,8 @@
-@font-face {
-  font-family: 'Ubuntu';
-  src: url("fonts/Ubuntu/Ubuntu-Regular.ttf"); }
-@font-face {
-  font-family: 'Gagalin';
-  src: url("fonts/Gagalin/Gagalin-Regular.woff"); }
-@font-face {
-  font-family: 'Lifehack';
-  src: url("fonts/Lifehack Medium.woff"); }
+@import "_misc/fonts.scss";
 
-@mixin section-block {
-    min-height: 650px;
-    height: 100vh;
-    box-sizing: border-box;
-}
+@import "_misc/mixin.scss";
+
+@import "_misc/layot.scss";
 
 .container {
   width: 1100px;

@@ -10,6 +10,10 @@
   font-family: 'Lifehack';
   src: url("fonts/Lifehack Medium.woff"); }
 
+ul, p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0; }
+
 .container {
   width: 1100px;
   margin: auto; }
@@ -249,3 +253,5 @@
       text-transform: uppercase;
       text-align: center;
       vertical-align: middle; }
+
+/*# sourceMappingURL=main.css.map */
