@@ -1,25 +1,35 @@
 @font-face {
   font-family: 'Ubuntu';
-  src: url("fonts/Ubuntu/Ubuntu-Regular.ttf"); }
+  src: url("css/fonts/Ubuntu/Ubuntu-Regular.ttf"); }
 
 @font-face {
   font-family: 'Gagalin';
-  src: url("fonts/Gagalin/Gagalin-Regular.woff"); }
+  src: url("css/fonts/Gagalin/Gagalin-Regular.woff"); }
 
 @font-face {
   font-family: 'Lifehack';
-  src: url("fonts/Lifehack Medium.woff"); }
+  src: url("css/fonts/Lifehack Medium.woff"); }
 
 body, ul, p, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0; }
 
+ul {
+  list-style: none; }
+
 .wrapper {
   width: 100%;
   overflow: hidden; }
 
+.section {
+  min-height: 650px;
+  height: 100vh;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative; }
+
 .container {
-  width: 1100px;
+  width: 940px;
   margin: auto; }
 
 .clearfix::after {
@@ -27,34 +37,7 @@ body, ul, p, h1, h2, h3, h4, h5, h6 {
   display: block;
   clear: both; }
 
-.navigation {
-  z-index: 100;
-  list-style: none;
-  position: fixed;
-  top: 75px;
-  right: 50px; }
-  .navigation li {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    border: 4px solid transparent;
-    -webkit-box-shadow: 0 0 0 1px transparent;
-    box-shadow: 0 0 0 1px transparent;
-    margin-bottom: 7.5px; }
-    .navigation li a {
-      display: block;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background-color: #fff; }
-  .navigation .active {
-    -webkit-box-shadow: 0 0 0 1px #fff;
-    box-shadow: 0 0 0 1px #fff; }
-
 .header {
-  min-height: 650px;
-  height: 100vh;
-  box-sizing: border-box;
   position: relative;
   background: url("../image/video-bg.png") no-repeat 0 0;
   background-size: 100% 100%;
@@ -63,11 +46,12 @@ body, ul, p, h1, h2, h3, h4, h5, h6 {
   .header .header-top {
     height: 80px;
     margin: auto; }
-    .header .header-top .logo {
+    .header .header-top .header-logo {
       float: left;
-      display: block;
-      margin-left: 80px; }
-    .header .header-top .order {
+      display: block; }
+    .header .header-top .navigation {
+      float: right; }
+    .header .header-top .navigation-button {
       display: block;
       float: right;
       width: 97px;
@@ -79,29 +63,28 @@ body, ul, p, h1, h2, h3, h4, h5, h6 {
       text-align: center;
       text-transform: uppercase;
       margin-top: 18px;
-      margin-right: 80px;
       cursor: pointer; }
-    .header .header-top .header-menu {
+    .header .header-top .navigation-list {
       float: right;
       margin-top: 29px;
       font-size: 0;
       list-style: none; }
-      .header .header-top .header-menu li {
+      .header .header-top .navigation-list .navigation-list__item {
         float: left;
         margin-right: 36px;
         position: relative;
         list-style: none; }
-        .header .header-top .header-menu li a {
+        .header .header-top .navigation-list .navigation-list__item a {
           font: 13px/13px 'Ubuntu';
           letter-spacing: .1px;
           text-transform: uppercase;
           color: #fff;
           text-decoration: none; }
-        .header .header-top .header-menu li:last-child {
+        .header .header-top .navigation-list .navigation-list__item:last-child {
           margin-right: 15px; }
-          .header .header-top .header-menu li:last-child::after {
+          .header .header-top .navigation-list .navigation-list__item:last-child::after {
             display: none; }
-        .header .header-top .header-menu li::after {
+        .header .header-top .navigation-list .navigation-list__item::after {
           content: '';
           display: block;
           width: 4px;
@@ -115,7 +98,7 @@ body, ul, p, h1, h2, h3, h4, h5, h6 {
     float: left;
     width: 50%;
     height: 500px;
-    background: url("../image/burger.png") 97px -15px no-repeat; }
+    background: url("../image/burger.png") 15px -15px no-repeat; }
   .header .header-bottom .header-right {
     float: right;
     width: 50%;
@@ -132,7 +115,7 @@ body, ul, p, h1, h2, h3, h4, h5, h6 {
       margin-left: 10px;
       font: 62px/60px 'Lifehack';
       color: #fff; }
-  .header .arrow-down {
+  .header .header__arrow-down {
     display: block;
     position: absolute;
     bottom: 40px;
@@ -147,20 +130,15 @@ body, ul, p, h1, h2, h3, h4, h5, h6 {
     transform: translateX(-50%) rotate(45deg); }
 
 .features {
-  min-height: 650px;
-  height: 100vh;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
   background: url("../image/tomato-3.png") no-repeat;
   background-size: 100% 100%;
   padding-top: 64px; }
-  .features h1 {
+  .features .title {
     margin: 0;
     font: 72px/72px 'Gagalin';
     color: #2f3234;
     text-align: center; }
-  .features-block {
-    width: 935px;
+  .features-content {
     list-style: none;
     margin: auto;
     margin-top: 83px;
@@ -173,7 +151,7 @@ body, ul, p, h1, h2, h3, h4, h5, h6 {
     -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 0; }
-    .features-block li {
+    .features-content .features-item {
       -webkit-box-align: start;
       -webkit-align-items: flex-start;
       -ms-flex-align: start;
@@ -181,81 +159,110 @@ body, ul, p, h1, h2, h3, h4, h5, h6 {
       width: 295px;
       text-align: center;
       color: #2f3234; }
-      .features-block li .image-block {
+      .features-content .features-item .image-block {
         height: 90px; }
-      .features-block li img {
+      .features-content .features-item .image-block__pic {
         margin: auto; }
-      .features-block li h2 {
+      .features-content .features-item .features-item__title {
         margin-top: 30px;
         margin-bottom: 15px;
         font: 23px/28px 'Lifehack'; }
-      .features-block li p {
+      .features-content .features-item p {
         font: 14px/24px 'Ubuntu'; }
 
-.reviews {
-  min-height: 650px;
-  height: 100vh;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
-  .reviews ul {
-    list-style: none;
+.reviews ul {
+  list-style: none;
+  height: 100%;
+  padding: 0;
+  margin: 0; }
+
+.reviews li[class^='reviews-item1'] {
+  background: url("../image/photo/1.png") no-repeat; }
+
+.reviews li[class^='reviews-item2'] {
+  background: url("../image/photo/2.png") no-repeat; }
+
+.reviews li[class^='reviews-item3'] {
+  background: url("../image/photo/3.png") no-repeat; }
+
+.reviews li[class^='reviews-item4'] {
+  background: url("../image/photo/4.png") no-repeat; }
+
+.reviews li[class^='reviews-item5'] {
+  background: url("../image/photo/5.png") no-repeat; }
+
+.reviews li[class^='reviews-item6'] {
+  background: url("../image/photo/6.png") no-repeat; }
+
+.reviews li[class^='reviews-item7'] {
+  background: url("../image/photo/7.png") no-repeat; }
+
+.reviews li[class^='reviews-item8'] {
+  background: url("../image/photo/8.png") no-repeat; }
+
+.reviews li[class^='reviews-item'] {
+  float: left;
+  width: 25%;
+  height: 50%;
+  background-size: cover;
+  background-position: center; }
+  .reviews li[class^='reviews-item'] .reviews-item-hover {
+    width: 100%;
     height: 100%;
-    padding: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    padding-top: 50px;
+    padding-left: 20px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+  .reviews li[class^='reviews-item']:hover .reviews-item-hover {
+    display: block; }
+  .reviews li[class^='reviews-item'] .reviews-item-hover__title {
+    font: 14px/14px 'Gagalin';
+    text-transform: uppercase;
+    color: #fff;
     margin: 0; }
-  .reviews li[class^='reviews-item1'] {
-    background: url("../image/photo/1.png") no-repeat; }
-  .reviews li[class^='reviews-item2'] {
-    background: url("../image/photo/2.png") no-repeat; }
-  .reviews li[class^='reviews-item3'] {
-    background: url("../image/photo/3.png") no-repeat; }
-  .reviews li[class^='reviews-item4'] {
-    background: url("../image/photo/4.png") no-repeat; }
-  .reviews li[class^='reviews-item5'] {
-    background: url("../image/photo/5.png") no-repeat; }
-  .reviews li[class^='reviews-item6'] {
-    background: url("../image/photo/6.png") no-repeat; }
-  .reviews li[class^='reviews-item7'] {
-    background: url("../image/photo/7.png") no-repeat; }
-  .reviews li[class^='reviews-item8'] {
-    background: url("../image/photo/8.png") no-repeat; }
-  .reviews li[class^='reviews-item'] {
-    float: left;
-    width: 25%;
-    height: 50%;
-    background-size: cover;
-    background-position: center; }
-    .reviews li[class^='reviews-item'] .reviews-item-hover {
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      display: none;
-      padding-top: 50px;
-      padding-left: 20px;
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box; }
-    .reviews li[class^='reviews-item']:hover .reviews-item-hover {
-      display: block; }
-    .reviews li[class^='reviews-item'] h2 {
-      font: 14px/14px 'Gagalin';
-      text-transform: uppercase;
-      color: #fff;
-      margin: 0; }
-    .reviews li[class^='reviews-item'] p {
-      font: 14px/24px 'Ubuntu';
-      color: #fff;
-      margin-top: 30px;
-      width: 90%; }
-    .reviews li[class^='reviews-item'] a {
+  .reviews li[class^='reviews-item'] p {
+    font: 14px/24px 'Ubuntu';
+    color: #fff;
+    margin-top: 30px;
+    width: 90%; }
+  .reviews li[class^='reviews-item'] .reviews-item-hover__button {
+    display: block;
+    width: 110px;
+    height: 35px;
+    border-radius: 3px;
+    background-color: #2f3234;
+    color: #fff;
+    text-decoration: none;
+    font: 13px/35px 'Ubuntu';
+    text-transform: uppercase;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 20px; }
+
+.navigation-fixed {
+  z-index: 100;
+  list-style: none;
+  position: fixed;
+  top: 75px;
+  right: 50px; }
+  .navigation-fixed li {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border: 4px solid transparent;
+    -webkit-box-shadow: 0 0 0 1px transparent;
+    box-shadow: 0 0 0 1px transparent;
+    margin-bottom: 7.5px; }
+    .navigation-fixed li a {
       display: block;
-      width: 110px;
-      height: 35px;
-      border-radius: 3px;
-      background-color: #2f3234;
-      color: #fff;
-      text-decoration: none;
-      font: 13px/35px 'Ubuntu';
-      text-transform: uppercase;
-      text-align: center;
-      vertical-align: middle; }
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: #fff; }
+  .navigation-fixed .active {
+    -webkit-box-shadow: 0 0 0 1px #fff;
+    box-shadow: 0 0 0 1px #fff; }
 
 /*# sourceMappingURL=main.css.map */

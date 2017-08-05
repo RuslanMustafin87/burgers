@@ -1,0 +1,58 @@
+.reviews {
+  ul {
+    list-style: none;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  @for $i from 1 through 8 {
+    li[class^='reviews-item#{$i}'] {
+    background: url('../image/photo/#{$i}.png') no-repeat;
+    }
+  }
+  li[class^='reviews-item'] {
+    float: left;
+    width: 25%;
+    height: 50%;
+    background-size: cover; 
+    background-position: center;
+    .reviews-item-hover {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, .5);
+      display: none;
+      padding-top: 50px;
+      padding-left: 20px;
+      box-sizing: border-box;
+    }
+    &:hover .reviews-item-hover {
+      display: block;
+    }
+    .reviews-item-hover__title {
+      font: 14px/14px 'Gagalin';
+      text-transform: uppercase;
+      color: #fff;
+      margin: 0;
+    }
+    p {
+      font: 14px/24px 'Ubuntu';
+      color: #fff;
+      margin-top: 30px;
+      width: 90%;
+    }
+    .reviews-item-hover__button {
+      display: block;
+      width: 110px;
+      height: 35px;
+      border-radius: 3px;
+      background-color: $black;
+      color: #fff;
+      text-decoration: none;
+      font: 13px/35px 'Ubuntu';
+      text-transform: uppercase;
+      text-align: center;
+      vertical-align: middle;
+      margin-top: 20px;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.features {
+  background: url('../image/tomato-3.png') no-repeat;
+  background-size: 100% 100%;
+  padding-top: 64px;
+  .title {
+    margin: 0;
+    font: 72px/72px 'Gagalin';
+    color: $black;
+    text-align: center;
+  }
+  &-content {
+    list-style: none;
+    margin: auto;
+    margin-top: 83px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    .features-item {
+      align-items: flex-start;
+      width: 295px;
+      text-align: center;
+      color: $black;
+      .image-block {
+        height: 90px;
+      }
+      .image-block__pic {
+        margin: auto;
+      }
+      .features-item__title {
+        margin-top: 30px;
+        margin-bottom: 15px;
+        font: 23px/28px 'Lifehack';
+      }
+      p {
+        font: 14px/24px 'Ubuntu';
+      }
+    }
+  }
+}
