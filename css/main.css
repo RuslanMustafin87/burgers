@@ -17,6 +17,15 @@ body, ul, p, h1, h2, h3, h4, h5, h6 {
 ul {
   list-style: none; }
 
+label {
+  display: block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+input {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
 .wrapper {
   width: 100%;
   overflow: hidden; }
@@ -240,6 +249,320 @@ ul {
     text-align: center;
     vertical-align: middle;
     margin-top: 20px; }
+
+.team {
+  background: url("/image/SBS_1255-X2.png") center no-repeat;
+  background-size: cover; }
+  .team .team-content {
+    height: 100%;
+    width: 50%;
+    float: right;
+    background-color: #313436;
+    opacity: .9;
+    padding-left: 80px; }
+    .team .team-content .team-caption {
+      margin-top: 90px;
+      font: 72px 'Gagalin';
+      line-height: 72px;
+      color: #f9b43b; }
+    .team .team-content .team-members {
+      margin-top: 90px; }
+      .team .team-content .team-members .member {
+        margin-bottom: 35px; }
+        .team .team-content .team-members .member .member-title {
+          height: 28px;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+          -ms-flex-align: center;
+          align-items: center; }
+          .team .team-content .team-members .member .member-title h2 {
+            font: 14px 'Gagalin';
+            color: #fff; }
+          .team .team-content .team-members .member .member-title::before {
+            content: '';
+            display: block;
+            height: 0;
+            width: 0;
+            border: 9px solid transparent;
+            border-top-color: #f9b43b;
+            border-bottom: none;
+            margin-right: 10px;
+            -webkit-transition: .5s;
+            -o-transition: .5s;
+            transition: .5s; }
+        .team .team-content .team-members .member:hover .member-title::before {
+          -webkit-transform: rotate(180deg);
+          -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+          -webkit-transition: .5s;
+          -o-transition: .5s;
+          transition: .5s; }
+        .team .team-content .team-members .member:hover .member-content {
+          height: 100px;
+          -webkit-transition: height .5s;
+          -o-transition: height .5s;
+          transition: height .5s; }
+        .team .team-content .team-members .member:hover h2 {
+          color: #f9b43b; }
+        .team .team-content .team-members .member .member-content {
+          height: 0;
+          -webkit-transition: height .5s;
+          -o-transition: height .5s;
+          transition: height .5s;
+          overflow: hidden;
+          margin-top: 15px; }
+          .team .team-content .team-members .member .member-content .team-pic {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-left: 20px;
+            float: left; }
+          .team .team-content .team-members .member .member-content h3 {
+            font: bold 14px 'Ubuntu';
+            color: #fff;
+            margin-left: 140px; }
+          .team .team-content .team-members .member .member-content p {
+            font: 14px 'Ubuntu';
+            color: #fff;
+            margin-left: 140px;
+            margin-top: 20px; }
+
+.menu {
+  background: url("/image/menu-bg.png") center no-repeat;
+  background-size: cover;
+  position: relative; }
+  .menu .menu-title {
+    top: 110px;
+    left: 90px;
+    position: absolute;
+    font: 72px/64px 'Gagalin';
+    color: #fff; }
+  .menu .menu-main {
+    float: right;
+    height: 100%;
+    width: 50%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end; }
+    .menu .menu-main .menu-item {
+      width: 80px;
+      position: relative; }
+      .menu .menu-main .menu-item::after {
+        content: '';
+        display: block;
+        height: 100%;
+        width: 100%;
+        -webkit-filter: brightness(40%);
+        filter: brightness(40%); }
+      .menu .menu-main .menu-item:hover::after {
+        -webkit-filter: brightness(100%);
+        filter: brightness(100%); }
+      .menu .menu-main .menu-item:nth-child(1)::after {
+        background: url("/image/meat-menu.png") center no-repeat;
+        background-size: cover; }
+      .menu .menu-main .menu-item:nth-child(2)::after {
+        background: url("/image/diet-menu.png") center no-repeat;
+        background-size: cover; }
+      .menu .menu-main .menu-item:nth-child(3)::after {
+        background: url("/image/meat-menu.png") center no-repeat;
+        background-size: cover; }
+      .menu .menu-main .menu-item p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 80pox;
+        font: 40px 'Gagalin';
+        color: #fff;
+        text-align: center;
+        -webkit-transform: translate(-50%, -50%) rotate(-90deg);
+        -ms-transform: translate(-50%, -50%) rotate(-90deg);
+        transform: translate(-50%, -50%) rotate(-90deg);
+        white-space: nowrap;
+        z-index: 100; }
+
+.order {
+  background: url("../../image/order-bg.png");
+  padding-top: 50px; }
+  .order .title {
+    font: 72px "Gagalin";
+    color: #f9b43b;
+    text-align: center; }
+  .order .order-form-block {
+    margin-top: 68px; }
+  .order .form {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    .order .form .form__input {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      padding-left: 10px;
+      padding-right: 10px;
+      border-radius: 5px;
+      border: none;
+      height: 35px;
+      margin-top: 5px; }
+    .order .form .form__label-font {
+      color: #fff;
+      font: 14px/24px "Ubuntu"; }
+    .order .form .form__input:focus {
+      border: 2px solid #f9b43b;
+      outline: none; }
+    .order .form .form-left {
+      width: 50%;
+      padding-right: 10px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-align-content: flex-start;
+      -ms-flex-line-pack: start;
+      align-content: flex-start;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box; }
+      .order .form .form-left .form__name {
+        width: 50%;
+        padding-right: 10px; }
+        .order .form .form-left .form__name .form__input-name {
+          width: 100%; }
+      .order .form .form-left .form__tel {
+        width: 50%;
+        padding-left: 10px; }
+        .order .form .form-left .form__tel .form__input-tel {
+          width: 100%; }
+      .order .form .form-left .form__street {
+        width: 100%;
+        margin-top: 11px; }
+        .order .form .form-left .form__street .form__input-street {
+          width: 100%; }
+      .order .form .form-left .form__adress-block {
+        width: 100%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        margin-top: 11px; }
+      .order .form .form-left .form__adress {
+        width: 25%;
+        margin-left: 20px; }
+        .order .form .form-left .form__adress .form__input-adress {
+          width: 100%; }
+        .order .form .form-left .form__adress:first-child {
+          margin-left: 0; }
+    .order .form .form-right {
+      width: 50%;
+      padding-left: 10px;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-pack: start;
+      -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      -webkit-align-content: flex-start;
+      -ms-flex-line-pack: start;
+      align-content: flex-start; }
+      .order .form .form-right .form__comment {
+        width: 100%; }
+        .order .form .form-right .form__comment .form__input-comment {
+          width: 100%;
+          height: 110px;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          padding-top: 5px; }
+      .order .form .form-right .form__payment {
+        width: 33%;
+        color: #fff;
+        font: 14px/24px "Ubuntu";
+        margin-right: 15px;
+        margin-top: 6px; }
+        .order .form .form-right .form__payment .form__payment-check {
+          float: left;
+          width: 7px;
+          height: 7px;
+          border: 4px solid #fff;
+          background-color: #fff;
+          border-radius: 50%; }
+        .order .form .form-right .form__payment p {
+          line-height: 14px;
+          margin-left: 25px; }
+        .order .form .form-right .form__payment .form__payment-input {
+          display: none; }
+          .order .form .form-right .form__payment .form__payment-input:checked + .form__payment-check {
+            background-color: red; }
+      .order .form .form-right .form__no-call {
+        width: 33%;
+        color: #fff;
+        font: 14px/14px "Ubuntu";
+        margin-top: 30px; }
+        .order .form .form-right .form__no-call .form__no-call-check {
+          float: left;
+          width: 15px;
+          height: 15px;
+          background-color: #fff; }
+        .order .form .form-right .form__no-call .form__no-call-input {
+          display: none; }
+          .order .form .form-right .form__no-call .form__no-call-input:checked + .form__no-call-check {
+            background: #fff url("../../icons/w128h1281338911632checkmark2.png") center no-repeat; }
+        .order .form .form-right .form__no-call p {
+          margin-left: 25px; }
+      .order .form .form-right .form__submit-block {
+        width: 100%; }
+      .order .form .form-right .form__submit {
+        width: 97px;
+        height: 35px;
+        background-color: #e45028;
+        border-radius: 5px;
+        color: #fff;
+        font: 13px/35px 'Ubuntu';
+        text-align: center;
+        text-transform: uppercase;
+        margin-top: 18px;
+        cursor: pointer;
+        outline: none;
+        border: none; }
+      .order .form .form-right .form__reset {
+        width: 97px;
+        height: 35px;
+        background-color: transparent;
+        color: #fff;
+        font: 13px/35px 'Ubuntu';
+        text-align: center;
+        margin-top: 18px;
+        cursor: pointer;
+        outline: none;
+        border: none; }
+
+.map, iframe {
+  width: 100%;
+  height: 100vh; }
 
 .navigation-fixed {
   z-index: 100;

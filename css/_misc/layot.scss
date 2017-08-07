@@ -7,6 +7,15 @@ ul {
   list-style: none;
 }
 
+label {
+  display: block;
+  box-sizing: border-box;
+}
+
+input {
+  box-sizing: border-box;
+}
+
 .wrapper {
     width: 100%;
     overflow: hidden;
