@@ -251,7 +251,7 @@ input {
     margin-top: 20px; }
 
 .team {
-  background: url("/image/SBS_1255-X2.png") center no-repeat;
+  background: url("../image/SBS_1255-X2.png") center no-repeat;
   background-size: cover; }
   .team .team-content {
     height: 100%;
@@ -333,7 +333,7 @@ input {
             margin-top: 20px; }
 
 .menu {
-  background: url("/image/menu-bg.png") center no-repeat;
+  background: url("../image/menu-bg.png") center no-repeat;
   background-size: cover;
   position: relative; }
   .menu .menu-title {
@@ -368,13 +368,13 @@ input {
         -webkit-filter: brightness(100%);
         filter: brightness(100%); }
       .menu .menu-main .menu-item:nth-child(1)::after {
-        background: url("/image/meat-menu.png") center no-repeat;
+        background: url("../image/meat-menu.png") center no-repeat;
         background-size: cover; }
       .menu .menu-main .menu-item:nth-child(2)::after {
-        background: url("/image/diet-menu.png") center no-repeat;
+        background: url("../image/diet-menu.png") center no-repeat;
         background-size: cover; }
       .menu .menu-main .menu-item:nth-child(3)::after {
-        background: url("/image/meat-menu.png") center no-repeat;
+        background: url("../image/meat-menu.png") center no-repeat;
         background-size: cover; }
       .menu .menu-main .menu-item p {
         position: absolute;
@@ -391,7 +391,7 @@ input {
         z-index: 100; }
 
 .order {
-  background: url("../../image/order-bg.png");
+  background: url("../image/order-bg.png");
   padding-top: 50px; }
   .order .title {
     font: 72px "Gagalin";
@@ -530,7 +530,7 @@ input {
         .order .form .form-right .form__no-call .form__no-call-input {
           display: none; }
           .order .form .form-right .form__no-call .form__no-call-input:checked + .form__no-call-check {
-            background: #fff url("../../icons/w128h1281338911632checkmark2.png") center no-repeat; }
+            background: #fff url("../icons/w128h1281338911632checkmark2.png") center no-repeat; }
         .order .form .form-right .form__no-call p {
           margin-left: 25px; }
       .order .form .form-right .form__submit-block {
