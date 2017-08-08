@@ -4,7 +4,7 @@
   background-size: 100% 100%;
   padding-top: 10px;
   -webkit-box-sizing: border-box;
-  .header-top {
+  .header__top {
     height: 80px;
     margin: auto; 
     .header-logo {
@@ -38,7 +38,7 @@
         margin-right: 36px;
         position: relative;
         list-style: none;
-        a {
+        .navigation-list__link {
             font: 13px/13px 'Ubuntu';
             letter-spacing: .1px;
             text-transform: uppercase;
@@ -65,14 +65,14 @@
       }    
     }      
   }
-  .header-bottom {
-  .header-left {
+  .header__bottom {
+  .header__left {
     float: left;
     width: 50%;
     height: 500px;
     background: url("../image/burger.png") 15px -15px no-repeat;
   }
-  .header-right {
+  .header__right {
     float: right;
     width: 50%;
     height: 500px;
