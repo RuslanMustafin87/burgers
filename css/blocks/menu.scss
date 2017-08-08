@@ -1,0 +1,48 @@
+.menu {
+    background: url('../image/menu-bg.png') center no-repeat;
+    background-size: cover;
+    position: relative;
+    .menu-title {
+        top: 110px;
+        left: 90px;
+        position: absolute;
+        font: 72px/64px 'Gagalin';
+        color: #fff;
+    }
+    .menu-main {
+        float: right;
+        height: 100%;
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+        .menu-item {
+            width: 80px;
+            position: relative;
+            &::after {
+                content: '';
+                display: block;
+                height: 100%;
+                width: 100%;
+                filter: brightness(40%);
+            }
+            &:hover::after {
+                filter: brightness(100%);
+            }
+            &:nth-child(1)::after {background: url('../image/meat-menu.png') center no-repeat; background-size: cover;}
+            &:nth-child(2)::after {background: url('../image/diet-menu.png') center no-repeat; background-size: cover;}
+            &:nth-child(3)::after {background: url('../image/meat-menu.png') center no-repeat; background-size: cover;}
+            p { 
+                position: absolute;
+                top:50%;
+                left: 50%;
+                height: 80pox;
+                font: 40px 'Gagalin';
+                color: #fff;
+                text-align: center;
+                transform: translate(-50%, -50%) rotate(-90deg);
+                white-space: nowrap;
+                z-index: 100;
+            }
+        }
+    }
+}

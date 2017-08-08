@@ -1,0 +1,82 @@
+.team {
+    background: url('../image/SBS_1255-X2.png') center no-repeat;
+    background-size: cover;
+    .team-content {
+        height: 100%;
+        width: 50%;
+        float: right;
+        background-color: #313436;
+        opacity: .9;
+        padding-left: 80px;
+        .team-caption {
+            margin-top: 90px;
+            font: 72px 'Gagalin';
+            line-height: 72px;
+            color: $yellow;
+        }
+        .team-members {
+            margin-top: 90px;
+            .member {
+                margin-bottom: 35px;
+                .member-title {
+                    height: 28px;
+                    display: flex;
+                    align-items: center;
+                    h2 {
+                        font: 14px 'Gagalin';
+                        color: #fff;
+                    }
+                    &::before {
+                        content: '';
+                        display: block;
+                        height: 0;
+                        width: 0;
+                        border: 9px solid transparent;
+                        border-top-color: $yellow;
+                        border-bottom: none;  
+                        margin-right: 10px;
+                        transition: .5s;
+                    }
+                }
+                &:hover {
+                    .member-title::before {
+                       transform: rotate(180deg);
+                       transition: .5s;
+                   }
+                    .member-content {
+                       height: 100px;
+                       transition: height .5s;
+                   }
+                    h2 {
+                        color: $yellow;
+                    }
+                }
+                .member-content {
+                    height: 0;
+                    transition: height .5s;
+                    overflow: hidden;
+                    margin-top: 15px;
+                    .team-pic {
+                           height: 100px;
+                           width: 100px;
+                           border-radius: 50%;
+                           overflow: hidden;
+                           margin-left: 20px;
+                           float: left;
+                       }
+                    h3 {
+                        font: bold 14px 'Ubuntu';
+                        color: #fff;
+                        margin-left: 140px;
+                    }
+                    p {
+                        font: 14px 'Ubuntu';
+                        color:#fff;
+                        margin-left: 140px;
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+} 
