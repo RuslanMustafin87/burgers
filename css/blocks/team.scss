@@ -24,16 +24,17 @@
                     height: 28px;
                     display: flex;
                     align-items: center;
-                    font: 14px 'Gagalin';
+                    font: 14px/28px 'Gagalin';
                     color: #fff;
                     &::before {
                         content: '';
                         display: block;
-                        height: 0;
-                        width: 0;
-                        border: 9px solid transparent;
-                        border-top-color: $yellow;
-                        border-bottom: none;  
+                        height: 7px;
+                        width: 9px;
+                        // border: 9px solid transparent;
+                        // border-top-color: $yellow;
+                        // border-bottom: none;  
+                        background: url('../image/icons/triangle.svg') no-repeat;
                         margin-right: 10px;
                         transition: .5s;
                     }
@@ -70,7 +71,7 @@
                         margin-left: 140px;
                     }
                     p {
-                        font: 14px 'Ubuntu';
+                        font: 14px/24px 'Ubuntu';
                         color:#fff;
                         margin-left: 140px;
                         margin-top: 20px;

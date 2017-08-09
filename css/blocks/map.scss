@@ -4,28 +4,6 @@
         background-size: cover;
         flex-grow: 1;
         position: relative;
-        .map__marker {
-            position: absolute;
-            width: 50px;
-            height: 60px;
-            background: url('../image/icons/map-marker.svg') no-repeat;
-        }
-        .map__marker-pos1 {
-            top: 160px;
-            left: 880px;
-        }
-        .map__marker-pos2 {
-            top: 320px;
-            left: 1110px;
-        }
-        .map__marker-pos3 {
-            top: 520px;
-            left: 1460px;
-        }
-        .map__marker-pos4 {
-            top: 670px;
-            left: 890px;
-        }
     .footer {
         position: absolute;
         bottom: 0;

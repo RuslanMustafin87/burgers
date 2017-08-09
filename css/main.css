@@ -293,16 +293,14 @@ a {
           -webkit-align-items: center;
           -ms-flex-align: center;
           align-items: center;
-          font: 14px 'Gagalin';
+          font: 14px/28px 'Gagalin';
           color: #fff; }
           .team .team__content .acco .acco__item .acco__title::before {
             content: '';
             display: block;
-            height: 0;
-            width: 0;
-            border: 9px solid transparent;
-            border-top-color: #f9b43b;
-            border-bottom: none;
+            height: 7px;
+            width: 9px;
+            background: url("../image/icons/triangle.svg") no-repeat;
             margin-right: 10px;
             -webkit-transition: .5s;
             -o-transition: .5s;
@@ -340,7 +338,7 @@ a {
             color: #fff;
             margin-left: 140px; }
           .team .team__content .acco .acco__item .acco__content p {
-            font: 14px 'Ubuntu';
+            font: 14px/24px 'Ubuntu';
             color: #fff;
             margin-left: 140px;
             margin-top: 20px; }
@@ -410,15 +408,21 @@ a {
         background: url("../image/diet-menu.png") center no-repeat;
         background-size: cover; }
       .menu .acco-vertical .acco-vertical__item .acco-vertical__content {
+        padding: 0;
         width: 0;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
         overflow: hidden;
         background-color: #2e3133;
         opacity: .9;
         -webkit-transition: width .5s;
         -o-transition: width .5s;
-        transition: width .5s; }
+        transition: width .5s;
+        font: 14px/24px 'Ubuntu';
+        color: #fff; }
       .menu .acco-vertical .acco-vertical__item:hover .acco-vertical__content {
         width: 500px;
+        padding: 50px;
         -webkit-transition: width .7s;
         -o-transition: width .7s;
         transition: width .7s; }
@@ -607,23 +611,6 @@ a {
   -ms-flex-positive: 1;
   flex-grow: 1;
   position: relative; }
-  .map .map__marker {
-    position: absolute;
-    width: 50px;
-    height: 60px;
-    background: url("../image/icons/map-marker.svg") no-repeat; }
-  .map .map__marker-pos1 {
-    top: 160px;
-    left: 880px; }
-  .map .map__marker-pos2 {
-    top: 320px;
-    left: 1110px; }
-  .map .map__marker-pos3 {
-    top: 520px;
-    left: 1460px; }
-  .map .map__marker-pos4 {
-    top: 670px;
-    left: 890px; }
   .map .footer {
     position: absolute;
     bottom: 0;
