@@ -70,52 +70,52 @@
 	</section>
 
 	<section class="section team">
-		<div class="team-content">
-			<h1 class="team-caption">команда</h1>
-			<ul class="team-members">
-				<li class="member member-1">
-					<div class="member-title">
+		<div class="team__content">
+			<h1 class="title">команда</h1>
+			<ul class="acco">
+				<li class="acco__item acco__item-1 acco__item-active">
+					<div class="acco__title">
 						<h2>дэниэл редклиф</h2>
 					</div>
-					<div class="member-content">
-						<div class="team-pic">
-							<img src="image/aphex.png" alt="">
+					<div class="acco__content">
+						<div class="acco__pic">
+							<img src="image/aphex.png" alt="" class="acco__img">
 						</div>
 					    <h3>Оператор</h3>
 						<p>С радостью поможет подобрать идеальный бургер и оформить заказ.</p>
 					</div>
 				</li>
-				<li class="member member-2">
-					<div class="member-title">
+				<li class="acco__item acco__item-2">
+					<div class="acco__title">
 						<h2>ричард джеймс</h2>
 					</div>
-					<div class="member-content">
-					    <div class="team-pic">
-							<img src="image/aphex.png" alt="">
+					<div class="acco__content">
+						<div class="acco__pic">
+							<img src="image/aphex.png" alt="" class="acco__img">
 						</div>
 					    <h3>Оператор</h3>
 						<p>С радостью поможет подобрать идеальный бургер и оформить заказ.</p>
 					</div>
 				</li>
-				<li class="member member-3">
-					<div class="member-title">
+				<li class="acco__item acco__item-3">
+					<div class="acco__title">
 						<h2>джейк финн</h2>
 					</div>
-					<div class="member-content">
-					    <div class="team-pic">
-							<img src="image/aphex.png" alt="">
+					<div class="acco__content">
+						<div class="acco__pic">
+							<img src="image/aphex.png" alt="" class="acco__img">
 						</div>
 					    <h3>Оператор</h3>
 						<p>С радостью поможет подобрать идеальный бургер и оформить заказ.</p>
 					</div>
 				</li>
-				<li class="member member-4">
-					<div class="member-title">
+				<li class="acco__item acco__item-4">
+					<div class="acco__title">
 						<h2>николай иванов</h2>
 					</div>
-					<div class="member-content">
-					    <div class="team-pic">
-							<img src="image/aphex.png" alt="">
+					<div class="acco__content">
+						<div class="acco__pic">
+							<img src="image/aphex.png" alt="" class="acco__img">
 						</div>
 					    <h3>Оператор</h3>
 						<p>С радостью поможет подобрать идеальный бургер и оформить заказ.</p>
@@ -127,24 +127,24 @@
 
 	<section class="section menu">
 		<h1 class="title">меню</h1>
-		<ul class="menu__list">
-			<li class="menu__item">
-				<div class='menu__caption'>
+		<ul class="acco-vertical">
+			<li class="acco-vertical__item">
+				<div class='acco-vertical__caption'>
 					<p>для мясоедов</p>
 				</div>
-				<div class="menu__content"></div>
+				<div class="acco-vertical__content"></div>
 			</li>
-			<li class="menu__item">
-				<div class='menu__caption'>
+			<li class="acco-vertical__item">
+				<div class='acco-vertical__caption'>
 					<p>вегетерианское</p>
 				</div>
-				<div class="menu__content"></div>				
+				<div class="acco-vertical__content"></div>				
 			</li>
-			<li class="menu__item">
-				<div class='menu__caption'>
+			<li class="acco-vertical__item">
+				<div class='acco-vertical__caption'>
 					<p>диетическое</p>
 				</div>
-				<div class="menu__content"></div>				
+				<div class="acco-vertical__content"></div>				
 			</li>
 		</ul>
 	</section>
@@ -286,15 +286,13 @@
 	</section>
 
 	<section class="section map">
-		<div class="map__pic">
 			<div class="map__marker map__marker-pos1"></div>
 			<div class="map__marker map__marker-pos2"></div>
 			<div class="map__marker map__marker-pos3"></div>
 			<div class="map__marker map__marker-pos4"></div>
-		</div>
 		<footer class="footer">
 			<div class="container clearfix">
-				<div class="footer__contacts">
+				<div class="footer__left">
 					<div class="footer__adress">
 						<span>Санкт-Петербург, ул.Бабушкина, д.12/1, 15</span>
 					</div>
@@ -303,28 +301,30 @@
 						<span>+7 (812) 377-13</span>
 					</div>
 				</div>
-				<ul class="social">
-					<li class="social__items">
-						<a href="" class="social__link">
-							<img src="../image/icons/vk.svg" alt="vk" class="social__pic">
-						</a>
-					</li>
-					<li class="social__items">
-						<a href="" class="social__link">
-							<img src="../image/icons/fb.svg" alt="facebook" class="social__pic">
-						</a>
-					</li>
-					<li class="social__items">
-						<a href="" class="social__link">
-							<img src="../image/icons/inst.svg" alt="instagram" class="social__pic">
-						</a>
-					</li>
-					<li class="social__items">
-						<a href="" class="social__link">
+				<div class="footer__right">
+					<ul class="social">
+						<li class="social__items">
+							<a href="" class="social__link">
+								<img src="../image/icons/vk.svg" alt="vk" class="social__pic">
+							</a>
+						</li>
+						<li class="social__items">
+							<a href="" class="social__link">
+								<img src="../image/icons/fb.svg" alt="facebook" class="social__pic">
+							</a>
+						</li>
+						<li class="social__items">
+							<a href="" class="social__link">
+								<img src="../image/icons/inst.svg" alt="instagram" class="social__pic">
+							</a>
+						</li>
+						<li class="social__items">
+							<a href="" class="social__link">
 							<img src="../image/icons/twitter.svg" alt="twitter" class="social__pic">
-						</a>
-					</li>
-				</ul>
+							</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</footer>
 	</section>

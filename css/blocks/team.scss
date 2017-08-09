@@ -1,31 +1,31 @@
 .team {
     background: url('../image/SBS_1255-X2.png') center no-repeat;
     background-size: cover;
-    .team-content {
+    position: relative;
+    .team__content {
         height: 100%;
         width: 50%;
-        float: right;
+        position: absolute;
+        right: 0;
         background-color: #313436;
         opacity: .9;
         padding-left: 80px;
-        .team-caption {
+        .title {
             margin-top: 90px;
             font: 72px 'Gagalin';
             line-height: 72px;
             color: $yellow;
         }
-        .team-members {
+        .acco {
             margin-top: 90px;
-            .member {
+            .acco__item {
                 margin-bottom: 35px;
-                .member-title {
+                .acco__title {
                     height: 28px;
                     display: flex;
                     align-items: center;
-                    h2 {
-                        font: 14px 'Gagalin';
-                        color: #fff;
-                    }
+                    font: 14px 'Gagalin';
+                    color: #fff;
                     &::before {
                         content: '';
                         display: block;
@@ -39,11 +39,11 @@
                     }
                 }
                 &:hover {
-                    .member-title::before {
+                    .acco__title::before {
                        transform: rotate(180deg);
                        transition: .5s;
                    }
-                    .member-content {
+                    .acco__content {
                        height: 100px;
                        transition: height .5s;
                    }
@@ -51,12 +51,12 @@
                         color: $yellow;
                     }
                 }
-                .member-content {
+                .acco__content {
                     height: 0;
-                    transition: height .5s;
                     overflow: hidden;
+                    transition: height .5s;
                     margin-top: 15px;
-                    .team-pic {
+                    .acco__pic {
                            height: 100px;
                            width: 100px;
                            border-radius: 50%;

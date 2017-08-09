@@ -9,16 +9,17 @@
         font: 72px/64px 'Gagalin';
         color: #fff;
     }
-    .menu__list {
-        float: right;
+    .acco-vertical {
+        position: absolute;
+        right: 0;
         height: 100%;
         width: 50%;
         display: flex;
         justify-content: flex-end;
-        .menu__item {
+        .acco-vertical__item {
             display: flex;
             justify-content: flex-end;
-            .menu__caption {
+            .acco-vertical__caption {
                 width: 80px;
                 position: relative;
                 &::after {
@@ -41,21 +42,22 @@
                    z-index: 100;
                 }
             }
-            &:nth-child(1) .menu__caption::after {background: url('../image/meat-menu.png') center no-repeat; background-size: cover;}
-            &:nth-child(2) .menu__caption::after {background: url('../image/vegan-menu.png') center no-repeat; background-size: cover;}
-            &:nth-child(3) .menu__caption::after {background: url('../image/diet-menu.png') center no-repeat; background-size: cover;}
-            .menu__content {
+            &:nth-child(1) .acco-vertical__caption::after {background: url('../image/meat-menu.png') center no-repeat; background-size: cover;}
+            &:nth-child(2) .acco-vertical__caption::after {background: url('../image/vegan-menu.png') center no-repeat; background-size: cover;}
+            &:nth-child(3) .acco-vertical__caption::after {background: url('../image/diet-menu.png') center no-repeat; background-size: cover;}
+            .acco-vertical__content {
                 width: 0;
+                overflow: hidden;
                 background-color: #2e3133;
                 opacity: .9;
                 transition: width .5s;
             }
             &:hover {
-                .menu__content {
+                .acco-vertical__content {
                     width: 500px;
                     transition: width .7s;
                 }
-                .menu__caption::after {
+                .acco-vertical__caption::after {
                     filter: brightness(100%);
                 }
             }
