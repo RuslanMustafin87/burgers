@@ -42,7 +42,8 @@ a {
 
 .container {
   width: 940px;
-  margin: auto; }
+  margin: auto;
+  height: 100%; }
 
 .clearfix::after {
   content: '';
@@ -184,28 +185,28 @@ a {
 
 .reviews .reviews__list {
   height: 100%; }
-  .reviews .reviews__list li[class^="reviews__item reviews__item-hover1"] {
+  .reviews .reviews__list li[class^="reviews__item reviews__item-bg1"] {
     background: url("../image/photo/1.png") center no-repeat;
     background-size: cover; }
-  .reviews .reviews__list li[class^="reviews__item reviews__item-hover2"] {
+  .reviews .reviews__list li[class^="reviews__item reviews__item-bg2"] {
     background: url("../image/photo/2.png") center no-repeat;
     background-size: cover; }
-  .reviews .reviews__list li[class^="reviews__item reviews__item-hover3"] {
+  .reviews .reviews__list li[class^="reviews__item reviews__item-bg3"] {
     background: url("../image/photo/3.png") center no-repeat;
     background-size: cover; }
-  .reviews .reviews__list li[class^="reviews__item reviews__item-hover4"] {
+  .reviews .reviews__list li[class^="reviews__item reviews__item-bg4"] {
     background: url("../image/photo/4.png") center no-repeat;
     background-size: cover; }
-  .reviews .reviews__list li[class^="reviews__item reviews__item-hover5"] {
+  .reviews .reviews__list li[class^="reviews__item reviews__item-bg5"] {
     background: url("../image/photo/5.png") center no-repeat;
     background-size: cover; }
-  .reviews .reviews__list li[class^="reviews__item reviews__item-hover6"] {
+  .reviews .reviews__list li[class^="reviews__item reviews__item-bg6"] {
     background: url("../image/photo/6.png") center no-repeat;
     background-size: cover; }
-  .reviews .reviews__list li[class^="reviews__item reviews__item-hover7"] {
+  .reviews .reviews__list li[class^="reviews__item reviews__item-bg7"] {
     background: url("../image/photo/7.png") center no-repeat;
     background-size: cover; }
-  .reviews .reviews__list li[class^="reviews__item reviews__item-hover8"] {
+  .reviews .reviews__list li[class^="reviews__item reviews__item-bg8"] {
     background: url("../image/photo/8.png") center no-repeat;
     background-size: cover; }
   .reviews .reviews__list .reviews__item {
@@ -347,13 +348,13 @@ a {
   background: url("../image/menu-bg.png") center no-repeat;
   background-size: cover;
   position: relative; }
-  .menu .menu-title {
+  .menu .title {
     top: 110px;
     left: 90px;
     position: absolute;
     font: 72px/64px 'Gagalin';
     color: #fff; }
-  .menu .menu-main {
+  .menu .menu__list {
     float: right;
     height: 100%;
     width: 50%;
@@ -365,41 +366,62 @@ a {
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
     justify-content: flex-end; }
-    .menu .menu-main .menu-item {
-      width: 80px;
-      position: relative; }
-      .menu .menu-main .menu-item::after {
-        content: '';
-        display: block;
-        height: 100%;
-        width: 100%;
-        -webkit-filter: brightness(40%);
-        filter: brightness(40%); }
-      .menu .menu-main .menu-item:hover::after {
-        -webkit-filter: brightness(100%);
-        filter: brightness(100%); }
-      .menu .menu-main .menu-item:nth-child(1)::after {
+    .menu .menu__list .menu__item {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: end;
+      -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+      justify-content: flex-end; }
+      .menu .menu__list .menu__item .menu__caption {
+        width: 80px;
+        position: relative; }
+        .menu .menu__list .menu__item .menu__caption::after {
+          content: '';
+          display: block;
+          height: 100%;
+          width: 100%;
+          -webkit-filter: brightness(40%);
+          filter: brightness(40%); }
+        .menu .menu__list .menu__item .menu__caption p {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          height: 80pox;
+          font: 40px 'Gagalin';
+          color: #fff;
+          text-align: center;
+          -webkit-transform: translate(-50%, -50%) rotate(-90deg);
+          -ms-transform: translate(-50%, -50%) rotate(-90deg);
+          transform: translate(-50%, -50%) rotate(-90deg);
+          white-space: nowrap;
+          z-index: 100; }
+      .menu .menu__list .menu__item:nth-child(1) .menu__caption::after {
         background: url("../image/meat-menu.png") center no-repeat;
         background-size: cover; }
-      .menu .menu-main .menu-item:nth-child(2)::after {
+      .menu .menu__list .menu__item:nth-child(2) .menu__caption::after {
+        background: url("../image/vegan-menu.png") center no-repeat;
+        background-size: cover; }
+      .menu .menu__list .menu__item:nth-child(3) .menu__caption::after {
         background: url("../image/diet-menu.png") center no-repeat;
         background-size: cover; }
-      .menu .menu-main .menu-item:nth-child(3)::after {
-        background: url("../image/meat-menu.png") center no-repeat;
-        background-size: cover; }
-      .menu .menu-main .menu-item p {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        height: 80pox;
-        font: 40px 'Gagalin';
-        color: #fff;
-        text-align: center;
-        -webkit-transform: translate(-50%, -50%) rotate(-90deg);
-        -ms-transform: translate(-50%, -50%) rotate(-90deg);
-        transform: translate(-50%, -50%) rotate(-90deg);
-        white-space: nowrap;
-        z-index: 100; }
+      .menu .menu__list .menu__item .menu__content {
+        width: 0;
+        background-color: #2e3133;
+        opacity: .9;
+        -webkit-transition: width .5s;
+        -o-transition: width .5s;
+        transition: width .5s; }
+      .menu .menu__list .menu__item:hover .menu__content {
+        width: 500px;
+        -webkit-transition: width .7s;
+        -o-transition: width .7s;
+        transition: width .7s; }
+      .menu .menu__list .menu__item:hover .menu__caption::after {
+        -webkit-filter: brightness(100%);
+        filter: brightness(100%); }
 
 .order {
   background: url("../image/order-bg.png");
@@ -573,9 +595,81 @@ a {
         outline: none;
         border: none; }
 
-.map, iframe {
-  width: 100%;
-  height: 100vh; }
+.map {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+  .map .map__pic {
+    background: url("../image/map.png") center no-repeat;
+    background-size: cover;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    position: relative; }
+    .map .map__pic .map__marker {
+      position: absolute;
+      width: 50px;
+      height: 60px;
+      background: url("../image/icons/map-marker.svg") no-repeat; }
+    .map .map__pic .map__marker-pos1 {
+      top: 160px;
+      left: 880px; }
+    .map .map__pic .map__marker-pos2 {
+      top: 320px;
+      left: 1110px; }
+    .map .map__pic .map__marker-pos3 {
+      top: 520px;
+      left: 1460px; }
+    .map .map__pic .map__marker-pos4 {
+      top: 670px;
+      left: 890px; }
+  .map .footer {
+    height: 60px;
+    background-color: #121212; }
+    .map .footer .footer__contacts {
+      float: left;
+      margin-top: 5px; }
+      .map .footer .footer__contacts .footer__adress {
+        font: 14px/24px 'Ubuntu';
+        color: #fff; }
+      .map .footer .footer__contacts .footer__tel {
+        font: bold 14px/24px 'Ubuntu';
+        color: #e45028; }
+      .map .footer .footer__contacts .footer__pic {
+        margin-right: 5px; }
+    .map .footer .social {
+      float: right;
+      height: 100%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .map .footer .social .social__items {
+        width: 20px;
+        height: 20px;
+        margin-left: 20px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center; }
+        .map .footer .social .social__items .social__link {
+          width: 100%;
+          height: 100%; }
 
 .navigation-fixed {
   z-index: 100;

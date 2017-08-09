@@ -1,4 +1,68 @@
-.map, iframe {
-    width: 100%;
-    height: 100vh;
+.map {
+    display: flex;
+    flex-direction: column;
+    .map__pic {
+        background: url('../image/map.png') center no-repeat;
+        background-size: cover;
+        flex-grow: 1;
+        position: relative;
+        .map__marker {
+            position: absolute;
+            width: 50px;
+            height: 60px;
+            background: url('../image/icons/map-marker.svg') no-repeat;
+        }
+        .map__marker-pos1 {
+            top: 160px;
+            left: 880px;
+        }
+        .map__marker-pos2 {
+            top: 320px;
+            left: 1110px;
+        }
+        .map__marker-pos3 {
+            top: 520px;
+            left: 1460px;
+        }
+        .map__marker-pos4 {
+            top: 670px;
+            left: 890px;
+        }
+    }
+    .footer{
+        height: 60px;
+        background-color: #121212;
+        .footer__contacts {
+            float: left;
+            margin-top: 5px;
+            .footer__adress {
+                font: 14px/24px 'Ubuntu';
+                color: #fff;
+            }
+            .footer__tel {
+                font: bold 14px/24px 'Ubuntu';
+                color: #e45028;
+            }
+            .footer__pic {
+                margin-right: 5px;
+            }
+        }
+        .social {
+            float: right;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            .social__items {
+                width: 20px;
+                height: 20px;
+                margin-left: 20px;
+                display: flex;
+                align-items: center;
+                .social__link {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
 }
