@@ -16,14 +16,14 @@ $black: #2f3234;
     position: fixed;
     top: 75px;
     right: 50px;
-    li {
+    .navigation-fixed__item {
       width: 6px;
       height: 6px;
       border-radius: 50%;
       border: 4px solid transparent;
       box-shadow: 0 0 0 1px transparent;
       margin-bottom: 7.5px;
-      a {
+      .navigation-fixed_link {
         display: block;
         width: 6px;
         height: 6px;
@@ -31,10 +31,13 @@ $black: #2f3234;
         background-color: #fff;
 
       }
+      &:hover {
+         box-shadow: 0 0 0 1px #fff;
+      }
     }
     .active {
       box-shadow: 0 0 0 1px #fff;
-    } 
+    }
   }
 
 
