@@ -1,14 +1,14 @@
 @font-face {
   font-family: 'Ubuntu';
-  src: url("css/fonts/Ubuntu/Ubuntu-Regular.ttf"); }
+  src: url("../fonts/Ubuntu/Ubuntu-Regular.ttf"); }
 
 @font-face {
   font-family: 'Gagalin';
-  src: url("css/fonts/Gagalin/Gagalin-Regular.woff"); }
+  src: url("../fonts/Gagalin/Gagalin-Regular.woff"); }
 
 @font-face {
   font-family: 'Lifehack';
-  src: url("css/fonts/Lifehack Medium.woff"); }
+  src: url("../fonts/Lifehack Medium.woff"); }
 
 body, ul, p, h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -25,6 +25,9 @@ label {
 input {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
 
 .wrapper {
   width: 100%;
@@ -52,15 +55,15 @@ input {
   background-size: 100% 100%;
   padding-top: 10px;
   -webkit-box-sizing: border-box; }
-  .header .header-top {
+  .header .header__top {
     height: 80px;
     margin: auto; }
-    .header .header-top .header-logo {
+    .header .header__top .header-logo {
       float: left;
       display: block; }
-    .header .header-top .navigation {
+    .header .header__top .navigation {
       float: right; }
-    .header .header-top .navigation-button {
+    .header .header__top .navigation-button {
       display: block;
       float: right;
       width: 97px;
@@ -73,27 +76,27 @@ input {
       text-transform: uppercase;
       margin-top: 18px;
       cursor: pointer; }
-    .header .header-top .navigation-list {
+    .header .header__top .navigation-list {
       float: right;
       margin-top: 29px;
       font-size: 0;
       list-style: none; }
-      .header .header-top .navigation-list .navigation-list__item {
+      .header .header__top .navigation-list .navigation-list__item {
         float: left;
         margin-right: 36px;
         position: relative;
         list-style: none; }
-        .header .header-top .navigation-list .navigation-list__item a {
+        .header .header__top .navigation-list .navigation-list__item .navigation-list__link {
           font: 13px/13px 'Ubuntu';
           letter-spacing: .1px;
           text-transform: uppercase;
           color: #fff;
           text-decoration: none; }
-        .header .header-top .navigation-list .navigation-list__item:last-child {
+        .header .header__top .navigation-list .navigation-list__item:last-child {
           margin-right: 15px; }
-          .header .header-top .navigation-list .navigation-list__item:last-child::after {
+          .header .header__top .navigation-list .navigation-list__item:last-child::after {
             display: none; }
-        .header .header-top .navigation-list .navigation-list__item::after {
+        .header .header__top .navigation-list .navigation-list__item::after {
           content: '';
           display: block;
           width: 4px;
@@ -103,23 +106,23 @@ input {
           position: absolute;
           top: 4px;
           right: -19px; }
-  .header .header-bottom .header-left {
+  .header .header__bottom .header__left {
     float: left;
     width: 50%;
     height: 500px;
     background: url("../image/burger.png") 15px -15px no-repeat; }
-  .header .header-bottom .header-right {
+  .header .header__bottom .header__right {
     float: right;
     width: 50%;
     height: 500px; }
-    .header .header-bottom .header-right p:first-child {
+    .header .header__bottom .header__right p:first-child {
       margin-top: 114px;
       margin-bottom: 0;
       margin-left: 10px;
       font: 71px 'Gagalin';
       color: #f9b43b;
       letter-spacing: .7px; }
-    .header .header-bottom .header-right p:last-child {
+    .header .header__bottom .header__right p:last-child {
       margin-top: 22px;
       margin-left: 10px;
       font: 62px/60px 'Lifehack';
@@ -160,7 +163,7 @@ input {
     -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 0; }
-    .features-content .features-item {
+    .features-content .features__item {
       -webkit-box-align: start;
       -webkit-align-items: flex-start;
       -ms-flex-align: start;
@@ -168,54 +171,53 @@ input {
       width: 295px;
       text-align: center;
       color: #2f3234; }
-      .features-content .features-item .image-block {
+      .features-content .features__item .image-block {
         height: 90px; }
-      .features-content .features-item .image-block__pic {
+      .features-content .features__item .image-block__pic {
         margin: auto; }
-      .features-content .features-item .features-item__title {
+      .features-content .features__item .features-item__title {
         margin-top: 30px;
         margin-bottom: 15px;
         font: 23px/28px 'Lifehack'; }
-      .features-content .features-item p {
+      .features-content .features__item p {
         font: 14px/24px 'Ubuntu'; }
 
-.reviews ul {
-  list-style: none;
+.reviews .reviews-block {
   height: 100%;
   padding: 0;
   margin: 0; }
 
-.reviews li[class^='reviews-item1'] {
+.reviews li[class^='reviews__item1'] {
   background: url("../image/photo/1.png") no-repeat; }
 
-.reviews li[class^='reviews-item2'] {
+.reviews li[class^='reviews__item2'] {
   background: url("../image/photo/2.png") no-repeat; }
 
-.reviews li[class^='reviews-item3'] {
+.reviews li[class^='reviews__item3'] {
   background: url("../image/photo/3.png") no-repeat; }
 
-.reviews li[class^='reviews-item4'] {
+.reviews li[class^='reviews__item4'] {
   background: url("../image/photo/4.png") no-repeat; }
 
-.reviews li[class^='reviews-item5'] {
+.reviews li[class^='reviews__item5'] {
   background: url("../image/photo/5.png") no-repeat; }
 
-.reviews li[class^='reviews-item6'] {
+.reviews li[class^='reviews__item6'] {
   background: url("../image/photo/6.png") no-repeat; }
 
-.reviews li[class^='reviews-item7'] {
+.reviews li[class^='reviews__item7'] {
   background: url("../image/photo/7.png") no-repeat; }
 
-.reviews li[class^='reviews-item8'] {
+.reviews li[class^='reviews__item8'] {
   background: url("../image/photo/8.png") no-repeat; }
 
-.reviews li[class^='reviews-item'] {
+.reviews li[class^='reviews__item'] {
   float: left;
   width: 25%;
   height: 50%;
   background-size: cover;
   background-position: center; }
-  .reviews li[class^='reviews-item'] .reviews-item-hover {
+  .reviews li[class^='reviews__item'] .reviews-item__hover {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
@@ -224,19 +226,19 @@ input {
     padding-left: 20px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box; }
-  .reviews li[class^='reviews-item']:hover .reviews-item-hover {
+  .reviews li[class^='reviews__item']:hover .reviews-item__hover {
     display: block; }
-  .reviews li[class^='reviews-item'] .reviews-item-hover__title {
+  .reviews li[class^='reviews__item'] .reviews-item-hover__title {
     font: 14px/14px 'Gagalin';
     text-transform: uppercase;
     color: #fff;
     margin: 0; }
-  .reviews li[class^='reviews-item'] p {
+  .reviews li[class^='reviews__item'] p {
     font: 14px/24px 'Ubuntu';
     color: #fff;
     margin-top: 30px;
     width: 90%; }
-  .reviews li[class^='reviews-item'] .reviews-item-hover__button {
+  .reviews li[class^='reviews__item'] .reviews-item-hover__button {
     display: block;
     width: 110px;
     height: 35px;

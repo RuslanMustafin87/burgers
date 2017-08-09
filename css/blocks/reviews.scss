@@ -1,22 +1,21 @@
 .reviews {
-  ul {
-    list-style: none;
+  .reviews-block {
     height: 100%;
     padding: 0;
     margin: 0;
   }
   @for $i from 1 through 8 {
-    li[class^='reviews-item#{$i}'] {
+    li[class^='reviews__item#{$i}'] {
     background: url('../image/photo/#{$i}.png') no-repeat;
     }
   }
-  li[class^='reviews-item'] {
+  li[class^='reviews__item'] {
     float: left;
     width: 25%;
     height: 50%;
     background-size: cover; 
     background-position: center;
-    .reviews-item-hover {
+    .reviews-item__hover {
       width: 100%;
       height: 100%;
       background-color: rgba(0, 0, 0, .5);
@@ -25,7 +24,7 @@
       padding-left: 20px;
       box-sizing: border-box;
     }
-    &:hover .reviews-item-hover {
+    &:hover .reviews-item__hover {
       display: block;
     }
     .reviews-item-hover__title {
