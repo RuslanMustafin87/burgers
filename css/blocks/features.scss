@@ -15,18 +15,18 @@
     display: flex;
     justify-content: space-between;
     padding: 0;
-    .features__item {
+    .features-content__item {
       align-items: flex-start;
       width: 295px;
       text-align: center;
       color: $black;
-      .image-block {
+      .features-content__pic {
         height: 90px;
       }
-      .image-block__pic {
+      .features-content__image {
         margin: auto;
       }
-      .features-item__title {
+      .features-content__title {
         margin-top: 30px;
         margin-bottom: 15px;
         font: 23px/28px 'Lifehack';
