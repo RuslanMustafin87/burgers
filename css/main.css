@@ -670,6 +670,12 @@ a {
         .map .footer .social .social__items .social__link {
           width: 100%;
           height: 100%; }
+          .map .footer .social .social__items .social__link .social__pic {
+            -webkit-filter: brightness(40%);
+            filter: brightness(40%); }
+          .map .footer .social .social__items .social__link:hover .social__pic {
+            -webkit-filter: brightness(100%);
+            filter: brightness(100%); }
 
 .navigation-fixed {
   z-index: 100;

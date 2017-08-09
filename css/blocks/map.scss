@@ -61,6 +61,12 @@
                 .social__link {
                     width: 100%;
                     height: 100%;
+                    .social__pic {
+                        filter: brightness(40%);
+                    }
+                    &:hover .social__pic {
+                        filter: brightness(100%);
+                    }
                 }
             }
         }
