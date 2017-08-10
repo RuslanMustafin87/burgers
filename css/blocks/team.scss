@@ -10,11 +10,17 @@
         background-color: #313436;
         opacity: .9;
         padding-left: rem(80px);
+        @include tablets {
+            width: 100%;
+        }
         .title {
             margin-top: rem(90px);
             font: rem(72px) 'Gagalin';
             line-height: rem(72px);
             color: $yellow;
+            @include tablets {
+                text-align: center;
+              }
         }
         .acco {
             margin-top: rem(90px);
@@ -32,13 +38,13 @@
                         display: block;
                         height: rem(7px);
                         width: rem(9px);
-                        // border: rem(9px) solid transparent;
-                        // border-top-color: $yellow;
-                        // border-bottom: none;  
                         background: url('../image/icons/triangle.svg') no-repeat;
                         margin-right: rem(10px);
                         transition: .5s;
                     }
+                    @include tablets {
+                        justify-content: center;
+                      }
                 }
                 &:hover {
                     .acco__title::before {
@@ -48,6 +54,9 @@
                     .acco__content {
                        height: rem(100px);
                        transition: height .5s;
+                       @include tablets {
+                            height: rem(240px);
+                      }
                    }
                     h2 {
                         color: $yellow;
@@ -65,11 +74,19 @@
                            overflow: hidden;
                            margin-left: rem(20px);
                            float: left;
+                           @include tablets {
+                                float: none;
+                                margin: auto;
+                          }
                        }
                     h3 {
                         font: bold rem(14px) 'Ubuntu';
                         color: #fff;
                         margin-left: rem(140px);
+                        @include tablets {
+                            margin: 24px 0 0 0;
+                            text-align: center;
+                          }
                     }
                     p {
                         font: rem(14px) 'Ubuntu';
@@ -77,6 +94,10 @@
                         color:#fff;
                         margin-left: rem(140px);
                         margin-top: rem(20px);
+                        @include tablets {
+                            margin-left: 0;
+                            text-align: center;
+                          }
                     }
                 }
             }

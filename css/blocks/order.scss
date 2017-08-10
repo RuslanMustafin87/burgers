@@ -13,6 +13,10 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
+		@include tablets {
+			width: rem(470px);
+			margin: auto;
+		  }
 		.form__input {
 			box-sizing: border-box;
 			padding-left: rem(10px);
@@ -33,12 +37,14 @@
 			outline: none;
 		}
 		.form-left {
-			width: 50%;
-			padding-right: rem(10px);
+			width: calc(100% / 2 - 10px);
 			display: flex;
 			flex-wrap: wrap;
 			align-content: flex-start;
 			box-sizing: border-box;
+			@include tablets {
+				width: 100%;
+			  }
 			.form__name {
 				flex-grow: 2;
 				padding-right: rem(10px);
@@ -65,13 +71,15 @@
 			}
 		}
 		.form-right {
-			width: 50%;
-			padding-left: rem(10px);
+			width: calc(100% / 2 - 10px);
 			box-sizing: border-box;
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: flex-start;
 			align-content: flex-start;
+			@include tablets {
+				width: 100%;
+			  }
 			.form__comment {
 				width: 100%;
 				.form__input-comment {
@@ -146,6 +154,9 @@
 				cursor: pointer;
 				outline: none;
 				border: none;
+				&:hover {
+					background-color: #c1401e;
+				}
 			}
 			.form__reset {
 				width: rem(97px);
