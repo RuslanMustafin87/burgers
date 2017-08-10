@@ -1,38 +1,41 @@
 .features {
   background: url('../image/tomato-3.png') no-repeat;
   background-size: 100% 100%;
-  padding-top: 64px;
+  padding-top: rem(64px);
   .title {
     margin: 0;
-    font: 72px/72px 'Gagalin';
+    font: rem(72px) 'Gagalin';
+    line-height: rem(72px);
     color: $black;
     text-align: center;
   }
   &-content {
     list-style: none;
     margin: auto;
-    margin-top: 83px;
+    margin-top: rem(83px);
     display: flex;
     justify-content: space-between;
     padding: 0;
     .features-content__item {
       align-items: flex-start;
-      width: 295px;
+      width: rem(295px);
       text-align: center;
       color: $black;
       .features-content__pic {
-        height: 90px;
+        height: rem(90px);
       }
       .features-content__image {
         margin: auto;
       }
       .features-content__title {
-        margin-top: 30px;
-        margin-bottom: 15px;
-        font: 23px/28px 'Lifehack';
+        margin-top: rem(30px);
+        margin-bottom: rem(15px);
+        font: rem(23px) 'Lifehack';
+        line-height: rem(28px);
       }
       p {
-        font: 14px/24px 'Ubuntu';
+        font: rem(14px) 'Ubuntu';
+        line-height: rem(24px);
       }
     }
   }

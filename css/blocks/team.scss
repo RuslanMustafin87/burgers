@@ -9,33 +9,34 @@
         right: 0;
         background-color: #313436;
         opacity: .9;
-        padding-left: 80px;
+        padding-left: rem(80px);
         .title {
-            margin-top: 90px;
-            font: 72px 'Gagalin';
-            line-height: 72px;
+            margin-top: rem(90px);
+            font: rem(72px) 'Gagalin';
+            line-height: rem(72px);
             color: $yellow;
         }
         .acco {
-            margin-top: 90px;
+            margin-top: rem(90px);
             .acco__item {
-                margin-bottom: 35px;
+                margin-bottom: rem(35px);
                 .acco__title {
-                    height: 28px;
+                    height: rem(28px);
                     display: flex;
                     align-items: center;
-                    font: 14px/28px 'Gagalin';
+                    font: rem(14px) 'Gagalin';
+                    line-height: rem(28px);
                     color: #fff;
                     &::before {
                         content: '';
                         display: block;
-                        height: 7px;
-                        width: 9px;
-                        // border: 9px solid transparent;
+                        height: rem(7px);
+                        width: rem(9px);
+                        // border: rem(9px) solid transparent;
                         // border-top-color: $yellow;
                         // border-bottom: none;  
                         background: url('../image/icons/triangle.svg') no-repeat;
-                        margin-right: 10px;
+                        margin-right: rem(10px);
                         transition: .5s;
                     }
                 }
@@ -45,7 +46,7 @@
                        transition: .5s;
                    }
                     .acco__content {
-                       height: 100px;
+                       height: rem(100px);
                        transition: height .5s;
                    }
                     h2 {
@@ -56,25 +57,26 @@
                     height: 0;
                     overflow: hidden;
                     transition: height .5s;
-                    margin-top: 15px;
+                    margin-top: rem(15px);
                     .acco__pic {
-                           height: 100px;
-                           width: 100px;
+                           height: rem(100px);
+                           width: rem(100px);
                            border-radius: 50%;
                            overflow: hidden;
-                           margin-left: 20px;
+                           margin-left: rem(20px);
                            float: left;
                        }
                     h3 {
-                        font: bold 14px 'Ubuntu';
+                        font: bold rem(14px) 'Ubuntu';
                         color: #fff;
-                        margin-left: 140px;
+                        margin-left: rem(140px);
                     }
                     p {
-                        font: 14px/24px 'Ubuntu';
+                        font: rem(14px) 'Ubuntu';
+                        line-height: rem(24px);
                         color:#fff;
-                        margin-left: 140px;
-                        margin-top: 20px;
+                        margin-left: rem(140px);
+                        margin-top: rem(20px);
                     }
                 }
             }

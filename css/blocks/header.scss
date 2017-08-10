@@ -2,10 +2,10 @@
   position: relative;
   background: url("../image/video-bg.png") no-repeat 0 0;
   background-size: 100% 100%;
-  padding-top: 10px;
+  padding-top: rem(10px);
   -webkit-box-sizing: border-box;
   .header__top {
-    height: 80px;
+    height: rem(80px);
     margin: auto; 
     .header-logo {
       float: left;
@@ -17,36 +17,38 @@
     .navigation__button {
       display: block;
       float: right;
-      width: 97px;
-      height: 35px;
+      width: rem(97px);
+      height: rem(35px);
       background-color: #e45028;
-      border-radius: 5px;
+      border-radius: rem(5px);
       color: #fff;
-      font: 13px/35px 'Ubuntu';
+      font: rem(13px) 'Ubuntu';
+      line-height: rem(35px);
       text-align: center;
       text-transform: uppercase;
-      margin-top: 18px;
+      margin-top: rem(18px);
       cursor: pointer;
     }
     .navigation-list {
       float: right;
-      margin-top: 29px;
+      margin-top: rem(29px);
       font-size: 0;
       list-style: none; 
       .navigation-list__item {
         float: left;
-        margin-right: 36px;
+        margin-right: rem(36px);
         position: relative;
         list-style: none;
         .navigation-list__link {
-            font: 13px/13px 'Ubuntu';
-            letter-spacing: .1px;
+            font: rem(13px) 'Ubuntu';
+            line-height: rem(13px);
+            letter-spacing: rem(.1px);
             text-transform: uppercase;
             color: #fff;
             text-decoration: none;
         }
         &:last-child {
-          margin-right: 15px;
+          margin-right: rem(15px);
           &::after {
             display: none; 
           }
@@ -54,13 +56,13 @@
         &::after {
           content: '';
           display: block;
-          width: 4px;
-          height: 4px;
+          width: rem(4px);
+          height: rem(4px);
           border-radius: 50%;
           background-color: #fff;
           position: absolute;
-          top: 4px;
-          right: -19px; 
+          top: rem(4px);
+          right: rem(-19px); 
         }
       }    
     }      
@@ -69,25 +71,26 @@
   .header__left {
     float: left;
     width: 50%;
-    height: 500px;
-    background: url("../image/burger.png") 15px -15px no-repeat;
+    height: rem(500px);
+    background: url("../image/burger.png") rem(15px) rem(-15px) no-repeat;
   }
   .header__right {
     float: right;
     width: 50%;
-    height: 500px;
+    height: rem(500px);
     p:first-child {
-      margin-top: 114px;
+      margin-top: rem(114px);
       margin-bottom: 0;
-      margin-left: 10px;
-      font: 71px 'Gagalin';
+      margin-left: rem(10px);
+      font: rem(71px) 'Gagalin';
       color: $yellow;
-      letter-spacing: .7px;
+      letter-spacing: rem(.7px);
     }
     p:last-child {
-      margin-top: 22px;
-      margin-left: 10px;
-      font: 62px/60px 'Lifehack';
+      margin-top: rem(22px);
+      margin-left: rem(10px);
+      font: rem(62px) 'Lifehack';
+      line-height: rem(60px);
       color: #fff;
     }
   }
@@ -95,13 +98,13 @@
   .header__arrow-down {
     display: block;
     position: absolute;
-    bottom: 40px;
+    bottom: rem(40px);
     left:50%;
-    width: 20px;
-    height: 20px;
-    border-radius: 3px;
-    border-bottom: 2px solid #fff;
-    border-right: 2px solid #fff;
+    width: rem(20px);
+    height: rem(20px);
+    border-radius: rem(3px);
+    border-bottom: rem(2px) solid #fff;
+    border-right: rem(2px) solid #fff;
     transform: translateX(-50%) rotate(45deg);
   }
 }
