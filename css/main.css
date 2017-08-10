@@ -572,7 +572,7 @@ a {
         .order .form .form-right .form__no-call .form__no-call-input {
           display: none; }
           .order .form .form-right .form__no-call .form__no-call-input:checked + .form__no-call-check {
-            background: #fff url("../icons/w128h1281338911632checkmark2.png") center no-repeat; }
+            background: #fff url("../image/icons/checkbox.png") center no-repeat; }
         .order .form .form-right .form__no-call p {
           margin-left: 25px; }
       .order .form .form-right .form__submit-block {
@@ -680,7 +680,7 @@ a {
     -webkit-box-shadow: 0 0 0 1px transparent;
     box-shadow: 0 0 0 1px transparent;
     margin-bottom: 7.5px; }
-    .navigation-fixed .navigation-fixed__item .navigation-fixed_link {
+    .navigation-fixed .navigation-fixed__item .navigation-fixed__link {
       display: block;
       width: 6px;
       height: 6px;
