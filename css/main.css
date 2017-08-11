@@ -423,6 +423,7 @@ a {
     .reviews .reviews__list .reviews__item .reviews__title {
       font: 0.875rem "Gagalin";
       line-height: 0.875rem;
+      letter-spacing: 0.09375rem;
       text-transform: uppercase;
       color: #fff;
       margin: 0; }
@@ -432,7 +433,9 @@ a {
       @media screen and (max-width: 480px) {
         .reviews .reviews__list .reviews__item .reviews__title {
           font-size: 1.5rem;
-          line-height: 1.875rem; } }
+          line-height: 1.875rem;
+          padding: 0 1.25rem;
+          margin-top: 10%; } }
     .reviews .reviews__list .reviews__item p {
       font: 0.875rem "Ubuntu";
       line-height: 1.5rem;
@@ -466,6 +469,12 @@ a {
       @media screen and (max-width: 768px) {
         .reviews .reviews__list .reviews__item .reviews__button {
           margin: 1.25rem auto; } }
+      @media screen and (max-width: 480px) {
+        .reviews .reviews__list .reviews__item .reviews__button {
+          width: 9.375rem;
+          height: 2.8125rem;
+          font: 1.0625rem "Ubuntu";
+          line-height: 2.8125rem; } }
 
 .team {
   background: url("../image/SBS_1255-X2.png") center no-repeat;
