@@ -9,6 +9,11 @@
         font: rem(72px) 'Gagalin';
         line-height: rem(64px);
         color: #fff;
+        @include phones {
+            font-size: rem(48px);
+            top: rem(70px);
+            left: rem(60px);
+        }
     }
     .acco-vertical {
         position: absolute;
@@ -17,6 +22,9 @@
         width: 50%;
         display: flex;
         justify-content: flex-end;
+        @include phones {
+            width: 100%;
+        }
         .acco-vertical__item {
             display: flex;
             justify-content: flex-end;
@@ -60,7 +68,7 @@
             }
             &:hover {
                 .acco-vertical__content {
-                    width: rem(500px);
+                    width: 100%;
                     padding: rem(50px);
                     transition: width .7s;
                 }
