@@ -30,6 +30,9 @@ a {
     height: 100vh;
     box-sizing: border-box;
     position: relative;
+    @include phones {
+      min-height: 0;
+    }
 }
 
 .container {
@@ -37,6 +40,7 @@ a {
   max-width: 940px;
   margin: auto; 
   height: 100%;
+  position: relative;
 }
 
 .clearfix::after {
@@ -50,6 +54,6 @@ html {
     font-size: rem(15px);
   }
   @include phones {
-    font-size: rem(13px);
+    font-size: rem(11px);
   }
 }
