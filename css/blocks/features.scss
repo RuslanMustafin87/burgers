@@ -32,39 +32,47 @@
       text-align: center;
       color: $black;
       box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
       @include phones {
         width: 100%;
         flex: 1;
         margin-top: rem(20px);
         height: rem(150px);
+        flex-direction: row;
       }
       .features-content__pic {
         height: rem(90px);
         @include phones {
-          float: left;
+          flex: 1;
+        }
+        .features-content__image {
+          margin: auto;
+          max-width: 100%;
+          max-height: 100%;
         }
       }
-      .features-content__image {
-        margin: auto;
-      }
-      .features-content__title {
-        margin-top: rem(30px);
-        margin-bottom: rem(15px);
-        font: rem(23px) 'Lifehack';
-        line-height: rem(28px);
+      .features__desc {
         @include phones {
-         margin-top: 0;
-         margin-left: rem(150px);
-         text-align: left;
+          flex: 2;
         }
-      }
-      p {
-        font: rem(14px) 'Ubuntu';
-        line-height: rem(24px);
-        @include phones {
-          margin-left: rem(150px);
+        .features-content__title {
+          margin-top: rem(30px);
+          margin-bottom: rem(15px);
+          font: rem(23px) 'Lifehack';
+          line-height: rem(28px);
+          @include phones {
+           margin-top: 0;
+           text-align: left;
+          }
+        }
+        p {
+          font: rem(14px) 'Ubuntu';
+          line-height: rem(24px);
+          @include phones {
           text-align: left;
-         }
+          }
+        }
       }
     }
   }

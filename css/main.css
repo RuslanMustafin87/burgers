@@ -299,7 +299,16 @@ a {
       text-align: center;
       color: #2f3234;
       -webkit-box-sizing: border-box;
-      box-sizing: border-box; }
+      box-sizing: border-box;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; }
       @media screen and (max-width: 480px) {
         .features-content .features-content__item {
           width: 100%;
@@ -308,30 +317,44 @@ a {
           -ms-flex: 1;
           flex: 1;
           margin-top: 1.25rem;
-          height: 9.375rem; } }
+          height: 9.375rem;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+          flex-direction: row; } }
       .features-content .features-content__item .features-content__pic {
         height: 5.625rem; }
         @media screen and (max-width: 480px) {
           .features-content .features-content__item .features-content__pic {
-            float: left; } }
-      .features-content .features-content__item .features-content__image {
-        margin: auto; }
-      .features-content .features-content__item .features-content__title {
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            flex: 1; } }
+        .features-content .features-content__item .features-content__pic .features-content__image {
+          margin: auto;
+          max-width: 100%;
+          max-height: 100%; }
+      @media screen and (max-width: 480px) {
+        .features-content .features-content__item .features__desc {
+          -webkit-box-flex: 2;
+          -webkit-flex: 2;
+          -ms-flex: 2;
+          flex: 2; } }
+      .features-content .features-content__item .features__desc .features-content__title {
         margin-top: 1.875rem;
         margin-bottom: 0.9375rem;
         font: 1.4375rem "Lifehack";
         line-height: 1.75rem; }
         @media screen and (max-width: 480px) {
-          .features-content .features-content__item .features-content__title {
+          .features-content .features-content__item .features__desc .features-content__title {
             margin-top: 0;
-            margin-left: 9.375rem;
             text-align: left; } }
-      .features-content .features-content__item p {
+      .features-content .features-content__item .features__desc p {
         font: 0.875rem "Ubuntu";
         line-height: 1.5rem; }
         @media screen and (max-width: 480px) {
-          .features-content .features-content__item p {
-            margin-left: 9.375rem;
+          .features-content .features-content__item .features__desc p {
             text-align: left; } }
 
 .reviews .reviews__list {
