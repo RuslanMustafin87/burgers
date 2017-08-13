@@ -754,17 +754,9 @@ a {
         .order .form .form-left {
           width: 100%; } }
       .order .form .form-left .form__name {
-        -webkit-box-flex: 2;
-        -webkit-flex-grow: 2;
-        -ms-flex-positive: 2;
-        flex-grow: 2;
         width: 50%;
         padding-right: 0.625rem; }
       .order .form .form-left .form__tel {
-        -webkit-box-flex: 2;
-        -webkit-flex-grow: 2;
-        -ms-flex-positive: 2;
-        flex-grow: 2;
         width: 50%;
         padding-left: 0.625rem; }
       .order .form .form-left .form__street {
