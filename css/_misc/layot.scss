@@ -33,6 +33,7 @@ a {
     @include phones {
       min-height: 0;
     }
+    box-sizing: border-box;
 }
 
 .container {
