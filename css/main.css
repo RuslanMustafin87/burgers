@@ -764,7 +764,6 @@ a {
         -webkit-flex-grow: 2;
         -ms-flex-positive: 2;
         flex-grow: 2;
-        width: 50%;
         padding-left: 0.625rem; }
       .order .form .form-left .form__street {
         -webkit-box-flex: 1;
