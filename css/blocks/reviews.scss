@@ -28,7 +28,7 @@
         transition: .5s;
         @include tablets {
             padding-left: 0;
-            padding-top: rem(30px);
+            padding-top: rem(20px);
         }
       }
         &:hover .reviews__hover {
@@ -45,12 +45,13 @@
         margin: 0;
         @include tablets {
           text-align: center;
+          margin-top: rem(10px);
         }
         @include phones {
           font-size: rem(24px);
           line-height: rem(30px);
-          padding: 0 rem(20px);
           margin-top: 10%;
+          padding: 0 rem(20px);
          }
       }
       p {
@@ -59,11 +60,14 @@
         color: #fff;
         margin-top: rem(30px);
         width: 90%;
+        max-height: 45%;
+        overflow: hidden;
         box-sizing: border-box;
         @include tablets {
           text-align: center;
           width: 100%;
-          padding: 0 rem(60px);
+          padding: 0 rem(25px);
+          margin-top: rem(10px);
         }
         @include phones {
           display: none;

@@ -1,5 +1,6 @@
 .order {
-	background: url('../image/order-bg.png');
+	background: url('../image/order-bg.png') no-repeat;
+	background-size: 100% 100%;
 	padding-top: rem(50px);
 	.title {
 		font: rem(72px) "Gagalin";
