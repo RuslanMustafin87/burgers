@@ -1,0 +1,101 @@
+.slider {
+    background: linear-gradient(to bottom,#f9b43b 20%,#eb8d38 50%, #f9b43b 80%);
+    display: flex;
+    align-items: center;
+    .slider__block {
+        width: 100%;
+        height: 73.84%;
+        display: flex;
+        justify-content: space-between;
+        .slider__arrow {
+            flex: 1;
+            position: relative;
+            .slider__arrow-img {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            &:first-child .slider__arrow-img  {
+                right: 0;
+                transform: rotate(90deg);
+            }
+            &:last-child .slider__arrow-img  {
+                left: 0;
+                transform: rotate(-90deg);
+            }
+        }
+        .slider__content {
+            .slider__left {
+                width: 50%;
+                height: 100%;
+                float: left;
+                background: url('../image/black-burger.png') center no-repeat;
+                position: relative;
+                .slider__consist {
+                    position: absolute;
+                    width: rem(90px);
+                    height: rem(90px);
+                    background-color: #f08c33;
+                    border-radius: 5px;
+                    top: 0;
+                    left: 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    text-align: center;
+                    font: rem(14px) 'Gagalin';
+                    line-height: rem(24px);
+                    color: #fff;
+                }
+                .slider__kkal {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                }
+            }
+            .slider__right {
+                width: 50%;
+                height: 100%;
+                float: right;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                .title {
+                    font: rem(72px) 'Gagalin';
+                    line-height: rem(62px);
+                    color: #fff;
+                }
+                .slider__text {
+                    font: rem(14px) 'Ubuntu';
+                    line-height: rem(24px);
+                    margin-top: rem(50px);
+                    color: #fff;
+                }
+                .slider__order {
+                    color: $red;
+                    line-height: rem(28px);
+                    .slider__price {
+                        font: rem(72px) 'Gagalin';
+                    }
+                    .slider__rubls {
+                        font: rem(30px) 'Gagalin';
+                    }
+                    .slider__button {
+                        display: inline-block;
+                        width: rem(97px);
+                        height: rem(35px);
+                        background-color: $red;
+                        border-radius: rem(5px);
+                        color: #fff;
+                        font: rem(13px) 'Ubuntu';
+                        line-height: rem(35px);
+                        text-align: center;
+                        text-transform: uppercase;
+                        margin-left: rem(20px);
+                    }
+                }
+            }
+        }
+
+    }
+}
