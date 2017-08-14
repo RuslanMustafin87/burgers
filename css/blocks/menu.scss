@@ -55,9 +55,9 @@
             &:nth-child(2) .acco-vertical__caption::after {background: url('../image/vegan-menu.png') center no-repeat; background-size: cover;}
             &:nth-child(3) .acco-vertical__caption::after {background: url('../image/diet-menu.png') center no-repeat; background-size: cover;}
             .acco-vertical__content {
-                padding: 0;
-                width: 0;
                 box-sizing: border-box;
+                // padding: rem(50px);
+                width: 0;
                 overflow: hidden;
                 background-color: #2e3133;
                 opacity: .9;
@@ -65,11 +65,15 @@
                 font: rem(14px) 'Ubuntu';
                 line-height: rem(24px);
                 color: #fff;
+                .acco-vertical__text {
+                    width: rem(350px);
+                    margin-top: rem(50px);
+                    margin-left: rem(50px);
+                }
             }
             &:hover {
                 .acco-vertical__content {
                     width: 100%;
-                    padding: rem(50px);
                     transition: width .7s;
                 }
                 .acco-vertical__caption::after {

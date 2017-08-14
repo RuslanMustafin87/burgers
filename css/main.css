@@ -412,7 +412,7 @@ a {
       @media screen and (max-width: 768px) {
         .reviews .reviews__list .reviews__item .reviews__hover {
           padding-left: 0;
-          padding-top: 1.875rem; } }
+          padding-top: 1.25rem; } }
     .reviews .reviews__list .reviews__item:hover .reviews__hover {
       opacity: 1;
       -webkit-transform: scale(1);
@@ -430,26 +430,30 @@ a {
       margin: 0; }
       @media screen and (max-width: 768px) {
         .reviews .reviews__list .reviews__item .reviews__title {
-          text-align: center; } }
+          text-align: center;
+          margin-top: 0.625rem; } }
       @media screen and (max-width: 480px) {
         .reviews .reviews__list .reviews__item .reviews__title {
           font-size: 1.5rem;
           line-height: 1.875rem;
-          padding: 0 1.25rem;
-          margin-top: 10%; } }
+          margin-top: 10%;
+          padding: 0 1.25rem; } }
     .reviews .reviews__list .reviews__item p {
       font: 0.875rem "Ubuntu";
       line-height: 1.5rem;
       color: #fff;
       margin-top: 1.875rem;
       width: 90%;
+      max-height: 45%;
+      overflow: hidden;
       -webkit-box-sizing: border-box;
       box-sizing: border-box; }
       @media screen and (max-width: 768px) {
         .reviews .reviews__list .reviews__item p {
           text-align: center;
           width: 100%;
-          padding: 0 3.75rem; } }
+          padding: 0 1.5625rem;
+          margin-top: 0.625rem; } }
       @media screen and (max-width: 480px) {
         .reviews .reviews__list .reviews__item p {
           display: none; } }
@@ -664,10 +668,9 @@ a {
         background: url("../image/diet-menu.png") center no-repeat;
         background-size: cover; }
       .menu .acco-vertical .acco-vertical__item .acco-vertical__content {
-        padding: 0;
-        width: 0;
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
+        width: 0;
         overflow: hidden;
         background-color: #2e3133;
         opacity: .9;
@@ -677,9 +680,12 @@ a {
         font: 0.875rem "Ubuntu";
         line-height: 1.5rem;
         color: #fff; }
+        .menu .acco-vertical .acco-vertical__item .acco-vertical__content .acco-vertical__text {
+          width: 21.875rem;
+          margin-top: 3.125rem;
+          margin-left: 3.125rem; }
       .menu .acco-vertical .acco-vertical__item:hover .acco-vertical__content {
         width: 100%;
-        padding: 3.125rem;
         -webkit-transition: width .7s;
         -o-transition: width .7s;
         transition: width .7s; }
@@ -688,7 +694,8 @@ a {
         filter: brightness(100%); }
 
 .order {
-  background: url("../image/order-bg.png");
+  background: url("../image/order-bg.png") no-repeat;
+  background-size: 100% 100%;
   padding-top: 3.125rem; }
   .order .title {
     font: 4.5rem "Gagalin";
