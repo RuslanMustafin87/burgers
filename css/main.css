@@ -84,7 +84,6 @@ a {
       .header .container {
         height: 100%; } }
   .header .header__top {
-    height: 5rem;
     padding-top: 0.625rem;
     -webkit-box-sizing: border-box;
     box-sizing: border-box; }
