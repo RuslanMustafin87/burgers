@@ -1,0 +1,118 @@
+.team {
+    background: url('../image/SBS_1255-X2.png') center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.team__content {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    right: 0;
+    background-color: #313436;
+    opacity: .9;
+    padding-left: rem(80px);
+    @include tablets {
+        width: 100%;
+    }
+}
+
+.team .title {
+    margin-top: rem(90px);
+    font: rem(72px) 'Gagalin';
+    line-height: rem(72px);
+    color: $yellow;
+    @include tablets {
+        text-align: center;
+    }
+}
+
+.acco {
+    margin-top: rem(90px);
+}
+
+.acco__item {
+    margin-bottom: rem(35px);
+    &:hover {
+        .acco__title::before {
+            transform: rotate(180deg);
+            transition: .5s;
+        }
+        .acco__content {
+            height: rem(100px);
+            transition: height .5s;
+            @include tablets {
+                height: rem(240px);
+            }
+        }
+        h2 {
+            color: $yellow;
+        }
+    }
+}
+
+.acco__title {
+    height: rem(28px);
+    display: flex;
+    align-items: center;
+    font: rem(14px) 'Gagalin';
+    line-height: rem(28px);
+    color: #fff;
+    &::before {
+        content: '';
+        display: block;
+        height: rem(7px);
+        width: rem(9px);
+        background: url('../image/icons/triangle.svg') no-repeat;
+        margin-right: rem(10px);
+        transition: .5s;
+    }
+    @include tablets {
+        justify-content: center;
+    }
+}
+
+.acco__content {
+    height: 0;
+    overflow: hidden;
+    transition: height .5s;
+    margin-top: rem(15px);
+}
+
+.acco__pic {
+    height: rem(100px);
+    width: rem(100px);
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: rem(20px);
+    float: left;
+    @include tablets {
+        float: none;
+        margin: auto;
+    }
+}
+
+.acco h3 {
+    font: bold rem(14px) 'Ubuntu';
+    color: #fff;
+    margin-left: rem(140px);
+    @include tablets {
+        margin: 24px 0 0 0;
+        text-align: center;
+    }
+}
+
+.acco__text {
+    font: rem(14px) 'Ubuntu';
+    line-height: rem(24px);
+    color: #fff;
+    margin-left: rem(140px);
+    margin-top: rem(20px);
+    @include tablets {
+        margin-left: 0;
+        text-align: center;
+    }
+    @include phones {
+        padding: 0 rem(50px);
+    }
+}

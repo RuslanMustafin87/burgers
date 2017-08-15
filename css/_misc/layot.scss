@@ -7,6 +7,15 @@ ul {
   list-style: none;
 }
 
+label {
+  display: block;
+  box-sizing: border-box;
+}
+
+input {
+  box-sizing: border-box;
+}
+
 a {
   text-decoration: none;
 }
@@ -21,15 +30,31 @@ a {
     height: 100vh;
     box-sizing: border-box;
     position: relative;
+    @include phones {
+      min-height: 0;
+    }
+    box-sizing: border-box;
 }
 
 .container {
-  width: 940px;
+  width: 95%;
+  max-width: 940px;
   margin: auto; 
+  height: 100%;
+  position: relative;
 }
 
 .clearfix::after {
   content: '';
   display: block;
   clear: both;
+}
+
+html {
+  @include tablets {
+    font-size: rem(15px);
+  }
+  @include phones {
+    font-size: rem(11px);
+  }
 }
