@@ -33,7 +33,7 @@
     margin-left: rem(30px);
     display: none;
     @include tablets {
-        display: flex;
+        display: block;
     }
 }
 
@@ -122,6 +122,7 @@
 
 .header__pic {
     display: block;
+    max-height: 100%;
     @include phones {
         max-width: 80%;
         max-height: 80%;

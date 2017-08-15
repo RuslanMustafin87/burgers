@@ -7,6 +7,9 @@
         color: $yellow;
         text-align: center;
     }
+    @include landscape {
+        min-height: 750px;
+    }
 }
 
 .form {

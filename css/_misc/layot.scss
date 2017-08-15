@@ -23,6 +23,7 @@ a {
 .wrapper {
     width: 100%;
     overflow: hidden;
+    position: relative;
 }
 
 .section {
@@ -30,10 +31,10 @@ a {
     height: 100vh;
     box-sizing: border-box;
     position: relative;
+    box-sizing: border-box;
     @include phones {
       min-height: 0;
     }
-    box-sizing: border-box;
 }
 
 .container {

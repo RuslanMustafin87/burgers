@@ -24,13 +24,14 @@
     width: 50%;
     display: flex;
     justify-content: flex-end;
-    @include phones {
+    @include tablets {
         width: 100%;
     }
 }
 
 .acco-vertical__item {
     display: flex;
+    transition: .7s;
     justify-content: flex-end;
     &:nth-child(1) .acco-vertical__item-container::after {
         background: url('../image/meat-menu.png') center no-repeat;
@@ -45,9 +46,10 @@
         background-size: cover;
     }
     &:hover {
+        flex: 1;
+        transition: .7s;
         .acco-vertical__content {
-            width: 100%;
-            transition: width .7s;
+            flex: 1;
         }
         .acco-vertical__item-container::after {
             filter: brightness(100%);
@@ -81,12 +83,11 @@
 
 .acco-vertical__content {
     box-sizing: border-box;
-    // padding: rem(50px);
     width: 0;
     overflow: hidden;
     background-color: #2e3133;
     opacity: .9;
-    transition: width .5s;
+    transition: .7s;
     font: rem(14px) 'Ubuntu';
     line-height: rem(24px);
     color: #fff;
@@ -96,4 +97,8 @@
     width: rem(350px);
     margin-top: rem(50px);
     margin-left: rem(50px);
+    @include phones {
+        width: rem(180px);
+        margin-left: rem(30px);
+    }
 }
