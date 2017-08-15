@@ -402,6 +402,44 @@ a {
       -ms-flex-direction: row;
       flex-direction: row; } }
 
+.features-content__pic {
+  height: 5.625rem; }
+  @media screen and (max-width: 480px) {
+    .features-content__pic {
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      flex: 1; } }
+
+.features-content__image {
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%; }
+
+@media screen and (max-width: 480px) {
+  .features__desc {
+    -webkit-box-flex: 2;
+    -webkit-flex: 2;
+    -ms-flex: 2;
+    flex: 2; } }
+
+.features-content__title {
+  margin-top: 1.875rem;
+  margin-bottom: 0.9375rem;
+  font: 1.4375rem "Lifehack";
+  line-height: 1.75rem; }
+  @media screen and (max-width: 480px) {
+    .features-content__title {
+      margin-top: 0;
+      text-align: left; } }
+
+.features__text {
+  font: 0.875rem "Ubuntu";
+  line-height: 1.5rem; }
+  @media screen and (max-width: 480px) {
+    .features__text {
+      text-align: left; } }
+
 .slider {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #f9b43b), color-stop(50%, #eb8d38), color-stop(80%, #f9b43b));
   background: -webkit-linear-gradient(top, #f9b43b 20%, #eb8d38 50%, #f9b43b 80%);
@@ -528,45 +566,6 @@ a {
           text-align: center;
           text-transform: uppercase;
           margin-left: 1.25rem; }
-
-.reviews .reviews__list {
-.features-content__pic {
-  height: 5.625rem; }
-  @media screen and (max-width: 480px) {
-    .features-content__pic {
-      -webkit-box-flex: 1;
-      -webkit-flex: 1;
-      -ms-flex: 1;
-      flex: 1; } }
-
-.features-content__image {
-  margin: auto;
-  max-width: 100%;
-  max-height: 100%; }
-
-@media screen and (max-width: 480px) {
-  .features__desc {
-    -webkit-box-flex: 2;
-    -webkit-flex: 2;
-    -ms-flex: 2;
-    flex: 2; } }
-
-.features-content__title {
-  margin-top: 1.875rem;
-  margin-bottom: 0.9375rem;
-  font: 1.4375rem "Lifehack";
-  line-height: 1.75rem; }
-  @media screen and (max-width: 480px) {
-    .features-content__title {
-      margin-top: 0;
-      text-align: left; } }
-
-.features__text {
-  font: 0.875rem "Ubuntu";
-  line-height: 1.5rem; }
-  @media screen and (max-width: 480px) {
-    .features__text {
-      text-align: left; } }
 
 .reviews__list {
   height: 100%; }
