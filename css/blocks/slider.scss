@@ -116,30 +116,19 @@
 }
 
 .slider__table {
+    display: table;
     width: 100%;
     height: 100%;
-    border-collapse: collapse;
-    border-spacing: 0;
-    tbody   {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
 }
 
 .slider__row {
-    flex: 1;
-    // height: 16.6667%;
-    display: flex;
+    display: table-row;
 }
 
 .slider__cell {
-    flex: 1;
-    // height: 100%;
-    // vertical-align: middle;
-    padding: 0;
+    display: table-cell;
+    width: 33.3333%;
+    vertical-align: middle;
 }
 
 .slider__cell:nth-child(2) {
