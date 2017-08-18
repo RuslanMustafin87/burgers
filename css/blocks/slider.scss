@@ -8,43 +8,44 @@
 }
 
 .slider__block {
-    width: 100%;
     height: 73.84%;
-    display: flex;
-    justify-content: space-between;
     @include phones {
         height: 90%;
     }
 }
 
 .slider__arrow {
-    flex: 1;
-    position: relative;
-    &:first-child .slider__arrow-img {
-        right: 0;
-        transform: translateY(-50%) rotate(90deg);
-    }
-    &:last-child .slider__arrow-img {
-        left: 0;
-        transform: translateY(-50%) rotate(-90deg);
-    }
-    @include phones {
-        transform: scale(.8);
-    }
-}
-
-.slider__arrow-img {
     position: absolute;
     top: 50%;
     display: block;
     cursor: pointer;
 }
 
-.slider__content {
-    overflow: hidden;
-    // position: relative;
+.slider__arrow-left {
+    left: -3%;
+    transform: translateY(-50%) rotate(90deg);
     @include tablets {
-        width: 85%;
+        left: 0%;
+    }
+}
+
+.slider__arrow-right {
+    right: -3%;
+    transform: translateY(-50%) rotate(-90deg);
+    @include tablets {
+        right: 0%;
+    }
+}
+
+
+.slider__content {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+    @include tablets {
+        width: 74.7396%;
     }
 }
 
@@ -227,6 +228,10 @@
         font: rem(72px) 'Gagalin';
         line-height: rem(62px);
         color: #fff;
+        @include tablets {
+            width: 90%;
+            margin: 0 auto;
+        }
         @include phones {
             font-size: rem(60px);
         }

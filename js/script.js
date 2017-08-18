@@ -12,7 +12,7 @@ document.querySelector('.fullscreen-menu__close').addEventListener('click', func
 
 //слайдер
 
-var button = $('.slider__arrow-img'),
+var button = $('.slider__arrow'),
     container = button.closest('.slider__block');
 
 button.on('click', function(){
