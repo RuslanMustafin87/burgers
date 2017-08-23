@@ -587,36 +587,36 @@
                 <div class="container">
                     <h1 class="title">закажите доставку</h1>
                     <div class="form">
-                        <form>
+                        <form action="server.php" method="post">
                             <div class="form-left">
                                 <label class="form__name form__label-font">	
 						        	Имя <br>
-						        	<input type="text" class="form__input-name form__input" required>
+						        	<input type="text" class="form__input-name form__input" name="name" required>
 					        	</label>
                                 <label class="form__tel form__label-font">
 						        	Телефон <br>
-						        	<input type="tel" class="form__input-tel form__input" required>
+						        	<input type="tel" class="form__input-tel form__input" name="tel" required>
 						       </label>
                                 <label class="form__street form__label-font">
 						        	Улица <br>
-						            <input type="text" class="form__input-street form__input" required>
+						            <input type="text" class="form__input-street form__input" name="street" required>
 						        </label>
                                 <div class="form__adress-block">
                                     <label class="form__adress  form__label-font">
 							    	Дом <br>
-							    	<input type="text" class="form__input-adress form__input" required>
+							    	<input type="text" class="form__input-adress form__input" name="house" required>
 						    	</label>
                                 <label class="form__adress form__label-font">
 					    			Корпус <br>
-						    		<input type="text" class="form__input-adress form__input">
+						    		<input type="text" class="form__input-adress form__input" name="corpus">
 						    	</label>
                                 <label class="form__adress form__label-font">
 							    	Квартира <br>
-							    	<input type="text" class="form__input-adress form__input" required>
+							    	<input type="text" class="form__input-adress form__input" name="flat" required>
 						    	</label>
                                 <label class="form__adress form__label-font">
 							    	Этаж <br>
-							    	<input type="text" class="form__input-adress form__input" required>
+							    	<input type="text" class="form__input-adress form__input" name="floor" required>
 							    </label>
                                 </div>
                             </div>

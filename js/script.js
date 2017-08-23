@@ -172,7 +172,7 @@ function init(){
             iconImageSize: [50, 72],
             iconImageOffset: [-3, -42]
         });
-    // myMap.geoObjects.add(myPlacemark);
+ 
     var coords = [
         [59.94554327989287,30.38935262114668],
         [59.91142323563909,30.50024587065841],
@@ -192,3 +192,10 @@ function init(){
     
     myMap.geoObjects.add(myCollection);
 }
+
+//фокус на input
+
+$('label').on('click', function(){
+    $('.form__input', this).focus();
+})
+
