@@ -1407,6 +1407,9 @@ a {
   position: fixed;
   top: 75px;
   right: 50px; }
+  .navigation-fixed .active {
+    -webkit-box-shadow: 0 0 0 1px #fff;
+    box-shadow: 0 0 0 1px #fff; }
   @media screen and (max-width: 768px) {
     .navigation-fixed {
       display: none; } }
@@ -1420,9 +1423,6 @@ a {
   box-shadow: 0 0 0 1px transparent;
   margin-bottom: 7.5px; }
   .navigation-fixed__item:hover {
-    -webkit-box-shadow: 0 0 0 1px #fff;
-    box-shadow: 0 0 0 1px #fff; }
-  .navigation-fixed__item .active {
     -webkit-box-shadow: 0 0 0 1px #fff;
     box-shadow: 0 0 0 1px #fff; }
 

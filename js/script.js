@@ -116,7 +116,7 @@ var scrollMain = function(sectionEq){
                 .siblings().removeClass('section-active');
     
             $('.navigation-fixed__item').eq(sectionEq).addClass('active')
-            .siblings().removeClass('active');
+               .siblings().removeClass('active');
     
             setTimeout(function(){
                 isScroll = false;

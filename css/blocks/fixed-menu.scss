@@ -4,6 +4,9 @@
     position: fixed;
     top: 75px;
     right: 50px;
+    .active {
+        box-shadow: 0 0 0 1px #fff;
+    }
     @include tablets {
       display: none;
     }
@@ -19,9 +22,6 @@
       &:hover {
          box-shadow: 0 0 0 1px #fff;
       }
-    .active {
-        box-shadow: 0 0 0 1px #fff;
-    }
 }
 
 .navigation-fixed__link {
