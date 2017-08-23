@@ -15,7 +15,7 @@ document.querySelector('.fullscreen-menu__close').addEventListener('click', func
 var button = $('.slider__arrow'),
     container = button.closest('.slider__block');
 
-button.on('click', function(){
+button.on('click touchstart', function(){
     var $this = $(this),
         items = $('.slider__item', container),
         itemActive = items.filter('.slider__item-active'),
@@ -49,7 +49,7 @@ var acco = $('.acco'),
     accoItems = $('.acco__item'),
     contentHeight;
 
-accoItems.on('click', function(){
+accoItems.on('click touchstart', function(){
     var $this = $(this),
         accoTitle = $('.acco__title', this),
         accoContent = $('.acco__content', this);
@@ -70,7 +70,7 @@ accoItems.on('click', function(){
 var accoVertical = $('.acco-vertical'),
     accoVerItems = $('.acco-vertical__item');
 
-accoVerItems.on('click', function(){
+accoVerItems.on('click touchstart', function(){
     var $this = $(this),
         accoVerItemContent = $('.acco-vertical__content',this);
     
@@ -93,6 +93,21 @@ var main = $('.main'),
     sections = $('.section'),
     isScroll = false;
 
+var scrollDirection = function(direction){
+
+    var sectionActive = sections.filter('.section-active'),
+    sectionNext = sectionActive.next(),
+    sectionPrev = sectionActive.prev(); 
+
+    if (direction == 'down' && sectionNext.length) {
+        scrollMain(sectionNext.index());
+    }
+        
+    if (direction == 'up' && sectionPrev.length) {
+        scrollMain(sectionPrev.index());
+    }
+}
+
 var scrollMain = function(sectionEq){
     
             if (isScroll) return
@@ -110,41 +125,31 @@ var scrollMain = function(sectionEq){
             }, 1300);
         }
 
-$('.wrapper').on('wheel', function(event){
-
-    var sectionActive = sections.filter('.section-active'),
-        sectionNext = sectionActive.next(),
-        sectionPrev = sectionActive.prev();  
+$('.wrapper').on('wheel', function(event){ 
     
-    if (event.originalEvent.deltaY > 0 && sectionNext.length) {
-        scrollMain(sectionNext.index());
-    }
-        
-    if (event.originalEvent.deltaY < 0 && sectionPrev.length) {
-        scrollMain(sectionPrev.index());
-    }
+    var direction = event.originalEvent.deltaY > 0 ? 'down' : 'up';
+
+    scrollDirection(direction);
 });
 
 $(document).on('keydown', function(event){
 
-    var sectionActive = sections.filter('.section-active'),
-        sectionNext = sectionActive.next(),
-        sectionPrev = sectionActive.prev();
-
     switch (event.keyCode) {
         case 38:
-            if (sectionPrev.length) {
-                scrollMain(sectionPrev.index());
-            };
+            scrollDirection('up');
             break;
         case 40:  
-            if (sectionNext.length) {
-                scrollMain(sectionNext.index());
-            };
+            scrollDirection('down');
             break;
     };
 });
 
 $('[data-scroll]').on('click touchstart', function(){
     scrollMain($(this).attr('data-scroll'));
+})
+
+$(window).swipe({
+    swipe: function(event, direction){
+        scrollDirection(direction);
+    }
 })
