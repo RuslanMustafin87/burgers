@@ -145,23 +145,6 @@ $(document).on('keydown', function(event){
     };
 });
 
-var fixedItem = $('.navigation-fixed__item');
-
-fixedItem.on('click', function(){
-    scrollMain($(this).index());
-});
-
-var navItem = $('.navigation-list__item');
-
-navItem.on('click', function(){
-    if ($(this).index() !== 5) { 
-        navItemIndex = $(this).index() + 1;
-        scrollMain(navItemIndex);
-    } else {
-        scrollMain(7);
-    };
+$('[data-scroll]').on('click touchstart', function(){
+    scrollMain($(this).attr('data-scroll'));
 })
-
-$('.header__button').on('click', function(){
-    scrollMain(6);
-});
