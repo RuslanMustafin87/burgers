@@ -122,6 +122,7 @@
 .slider__ingredients {
     display: none;
     width: rem(270px);
+    transition: width .3s;
     height: rem(330px);
     background-color: #fff;
     opacity: .9;

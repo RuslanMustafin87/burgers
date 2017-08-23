@@ -54,34 +54,18 @@ accoItems.on('click', function(){
         accoTitle = $('.acco__title', this),
         accoContent = $('.acco__content', this);
 
-        // if (screen.width > 768) {
-        //     contentHeight = 100
-        // } else {
-        //     contentHeight = 170
-        // }
-
-        // if ($this.hasClass('acco__item-active')) { 
-        //     accoContent.animate({'height': '0'}, {duration: 500,  queue: false});
-        //     $this.removeClass('acco__item-active');
-        // } else {
-        //     accoItems.removeClass('acco__item-active');
-        //     $this.addClass('acco__item-active');
-        // // accoTitle.css('color', '#f9b43b');
-        //     accoItems.find('.acco__content').animate({'height': '0'}, {duration: 500, queue: false});
-        //     accoContent.animate({'height': contentHeight + 'px'}, {duration: 500, queue: false});
-        // }
-
         if ($this.hasClass('acco__item-active')) { 
             accoContent.slideUp(500);
             $this.removeClass('acco__item-active');
         } else {
             accoItems.removeClass('acco__item-active');
             $this.addClass('acco__item-active');
-        // accoTitle.css('color', '#f9b43b');
             accoItems.find('.acco__content').slideUp(500);
             accoContent.slideDown(500)
         }
 })
+
+//вертикальный аккордеон
 
 var accoVertical = $('.acco-vertical'),
     accoVerItems = $('.acco-vertical__item');
@@ -103,30 +87,81 @@ accoVerItems.on('click', function(){
     }
 })
 
+//навигация
+
+var main = $('.main'),
+    sections = $('.section'),
+    isScroll = false;
+
+var scrollMain = function(sectionEq){
+    
+            if (isScroll) return
+            isScroll = true;
+    
+            main.css('transform', 'translateY(' + (sectionEq * -100) + '%)');
+            sections.eq(sectionEq).addClass('section-active')
+                .siblings().removeClass('section-active');
+    
+            $('.navigation-fixed__item').eq(sectionEq).addClass('active')
+            .siblings().removeClass('active');
+    
+            setTimeout(function(){
+                isScroll = false;
+            }, 1300);
+        }
+
 $('.wrapper').on('wheel', function(event){
 
-    var main = $('.main'),
-        sections = $('.section'),
-        sectionActive = sections.filter('.section-active'),
+    var sectionActive = sections.filter('.section-active'),
         sectionNext = sectionActive.next(),
-        sectionPrev = sectionActive.prev(),
-        position;
-
-    sectionActive.removeClass('section-active');
-        
-    var scrollMain = function(position){
-        main.css('transform', 'translateY(' + position + '%)');
-    }
+        sectionPrev = sectionActive.prev();  
     
     if (event.originalEvent.deltaY > 0 && sectionNext.length) {
-        position = (sectionNext.index() * -100);
-        sectionNext.addClass('section-active');
+        scrollMain(sectionNext.index());
     }
         
     if (event.originalEvent.deltaY < 0 && sectionPrev.length) {
-        position = (sectionPrev.index() * 100);
-        sectionPrev.addClass('section-active');
+        scrollMain(sectionPrev.index());
     }
+});
 
-    scrollMain(position);
+$(document).on('keydown', function(event){
+
+    var sectionActive = sections.filter('.section-active'),
+        sectionNext = sectionActive.next(),
+        sectionPrev = sectionActive.prev();
+
+    switch (event.keyCode) {
+        case 38:
+            if (sectionPrev.length) {
+                scrollMain(sectionPrev.index());
+            };
+            break;
+        case 40:  
+            if (sectionNext.length) {
+                scrollMain(sectionNext.index());
+            };
+            break;
+    };
+});
+
+var fixedItem = $('.navigation-fixed__item');
+
+fixedItem.on('click', function(){
+    scrollMain($(this).index());
+});
+
+var navItem = $('.navigation-list__item');
+
+navItem.on('click', function(){
+    if ($(this).index() !== 5) { 
+        navItemIndex = $(this).index() + 1;
+        scrollMain(navItemIndex);
+    } else {
+        scrollMain(7);
+    };
 })
+
+$('.header__button').on('click', function(){
+    scrollMain(6);
+});

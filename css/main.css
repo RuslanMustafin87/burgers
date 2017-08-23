@@ -572,15 +572,19 @@ a {
   .slider__consist:hover {
     background-color: #e35028; }
     .slider__consist:hover .slider__ingredients {
-      display: block; }
+      /* display: block; */
+      width: 16.875rem;
+      transition: width .5s;  }
 
 .slider__consist1 {
   display: block;
   margin-top: 3.75rem; }
 
 .slider__ingredients {
-  display: none;
-  width: 16.875rem;
+  overflow: hidden;
+  /* display: none; */
+  width: 0;
+  transition: width .5s;
   height: 20.625rem;
   background-color: #fff;
   opacity: .9;
