@@ -15,7 +15,7 @@ document.querySelector('.fullscreen-menu__close').addEventListener('click', func
 var button = $('.slider__arrow'),
     container = button.closest('.slider__block');
 
-button.on('click touchstart', function(){
+button.on('click', function(){
     var $this = $(this),
         items = $('.slider__item', container),
         itemActive = items.filter('.slider__item-active'),
@@ -49,7 +49,7 @@ var acco = $('.acco'),
     accoItems = $('.acco__item'),
     contentHeight;
 
-accoItems.on('click touchstart', function(){
+accoItems.on('click', function(){
     var $this = $(this),
         accoTitle = $('.acco__title', this),
         accoContent = $('.acco__content', this);
@@ -70,20 +70,18 @@ accoItems.on('click touchstart', function(){
 var accoVertical = $('.acco-vertical'),
     accoVerItems = $('.acco-vertical__item');
 
-accoVerItems.on('click touchstart', function(){
+accoVerItems.on('click', function(){
     var $this = $(this),
-        accoVerItemContent = $('.acco-vertical__content',this);
-    
+        accoVerContent = $this.next();
+
     if ($this.hasClass('acco-vertical__item-active')) { 
-        accoVerItemContent.animate({'width': '0'}, {duration: 500, queue: false});
+        accoVerContent.css('flex', '0');
         $this.removeClass('acco-vertical__item-active');
     } else {
-        accoVerItems.removeClass('acco-vertical__item-active');
-        $this.addClass('acco-vertical__item-active');
-        // accoVerItems.animate({'width': '0'}, {duration: 500, queue: false});
-        accoVerItems.find('.acco-vertical__content').animate({'width': '0'}, {duration: 500, queue: false});
-        // $this.animate({'width': '100%'}, {duration: 500, queue: false});
-        accoVerItemContent.animate({'width': '100%'}, {duration: 500, queue: false});
+        $this.addClass('acco-vertical__item-active')
+            .siblings().removeClass('acco-vertical__item-active');
+        $('.acco-vertical__content').css('flex', '0');
+        accoVerContent.css('flex', '1');
     }
 })
 

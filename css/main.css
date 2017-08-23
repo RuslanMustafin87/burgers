@@ -572,19 +572,18 @@ a {
   .slider__consist:hover {
     background-color: #e35028; }
     .slider__consist:hover .slider__ingredients {
-      /* display: block; */
-      width: 16.875rem;
-      transition: width .5s;  }
+      display: block; }
 
 .slider__consist1 {
   display: block;
   margin-top: 3.75rem; }
 
 .slider__ingredients {
-  overflow: hidden;
-  /* display: none; */
-  width: 0;
-  transition: width .5s;
+  display: none;
+  width: 16.875rem;
+  -webkit-transition: width .3s;
+  -o-transition: width .3s;
+  transition: width .3s;
   height: 20.625rem;
   background-color: #fff;
   opacity: .9;
@@ -995,13 +994,20 @@ a {
   position: absolute;
   right: 0;
   height: 100%;
-  width: 50%; }
+  width: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end; }
   @media screen and (max-width: 768px) {
     .acco-vertical {
       width: 100%; } }
 
 .acco-vertical__item {
-  float: right;
   height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1010,10 +1016,10 @@ a {
   .acco-vertical__item:nth-child(1) .acco-vertical__item-container::after {
     background: url("../image/meat-menu.png") center no-repeat;
     background-size: cover; }
-  .acco-vertical__item:nth-child(2) .acco-vertical__item-container::after {
+  .acco-vertical__item:nth-child(3) .acco-vertical__item-container::after {
     background: url("../image/vegan-menu.png") center no-repeat;
     background-size: cover; }
-  .acco-vertical__item:nth-child(3) .acco-vertical__item-container::after {
+  .acco-vertical__item:nth-child(5) .acco-vertical__item-container::after {
     background: url("../image/diet-menu.png") center no-repeat;
     background-size: cover; }
   .acco-vertical__item:hover .acco-vertical__item-container::after {
@@ -1045,9 +1051,18 @@ a {
   z-index: 100; }
 
 .acco-vertical__content {
+  display: block;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  width: 0;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0;
+  -ms-flex: 0;
+  flex: 0;
+  -webkit-transition: -webkit-box-flex .5s, -webkit-flex .5s;
+  transition: -webkit-box-flex .5s, -webkit-flex .5s;
+  -o-transition: flex .5s;
+  transition: flex .5s;
+  transition: flex .5s, -webkit-box-flex .5s, -webkit-flex .5s, -ms-flex .5s;
   overflow: hidden;
   background-color: #2e3133;
   opacity: .9;
@@ -1059,6 +1074,8 @@ a {
   width: 21.875rem;
   margin-top: 3.125rem;
   margin-left: 3.125rem; }
+  .acco-vertical__text p {
+    width: 100%; }
   @media screen and (max-width: 480px) {
     .acco-vertical__text {
       width: 11.25rem;
@@ -1393,25 +1410,27 @@ a {
   @media screen and (max-width: 768px) {
     .navigation-fixed {
       display: none; } }
-  .navigation-fixed .navigation-fixed__item {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    border: 4px solid transparent;
-    -webkit-box-shadow: 0 0 0 1px transparent;
-    box-shadow: 0 0 0 1px transparent;
-    margin-bottom: 7.5px; }
-    .navigation-fixed .navigation-fixed__item .navigation-fixed__link {
-      display: block;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background-color: #fff; }
-    .navigation-fixed .navigation-fixed__item:hover {
-      -webkit-box-shadow: 0 0 0 1px #fff;
-      box-shadow: 0 0 0 1px #fff; }
-  .navigation-fixed .active {
+
+.navigation-fixed__item {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 4px solid transparent;
+  -webkit-box-shadow: 0 0 0 1px transparent;
+  box-shadow: 0 0 0 1px transparent;
+  margin-bottom: 7.5px; }
+  .navigation-fixed__item:hover {
     -webkit-box-shadow: 0 0 0 1px #fff;
     box-shadow: 0 0 0 1px #fff; }
+  .navigation-fixed__item .active {
+    -webkit-box-shadow: 0 0 0 1px #fff;
+    box-shadow: 0 0 0 1px #fff; }
+
+.navigation-fixed__link {
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #fff; }
 
 /*# sourceMappingURL=main.css.map */

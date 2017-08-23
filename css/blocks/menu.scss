@@ -22,27 +22,25 @@
     right: 0;
     height: 100%;
     width: 50%;
-    // display: flex;
-    // justify-content: flex-end;
+    display: flex;
+    justify-content: flex-end;
     @include tablets {
         width: 100%;
     }
 }
 
 .acco-vertical__item {
-    float: right;
     height: 100%;
     display: flex;
-    // justify-content: flex-end;
     &:nth-child(1) .acco-vertical__item-container::after {
         background: url('../image/meat-menu.png') center no-repeat;
         background-size: cover;
     }
-    &:nth-child(2) .acco-vertical__item-container::after {
+    &:nth-child(3) .acco-vertical__item-container::after {
         background: url('../image/vegan-menu.png') center no-repeat;
         background-size: cover;
     }
-    &:nth-child(3) .acco-vertical__item-container::after {
+    &:nth-child(5) .acco-vertical__item-container::after {
         background: url('../image/diet-menu.png') center no-repeat;
         background-size: cover;
     }
@@ -78,9 +76,11 @@
 }
 
 .acco-vertical__content {
-    // flex: 1;
+    display: block;
     box-sizing: border-box;
-    width: 0;
+    flex: 0;
+    transition: flex .5s;
+    // width: 0;
     overflow: hidden;
     background-color: #2e3133;
     opacity: .9;
@@ -93,6 +93,9 @@
     width: rem(350px);
     margin-top: rem(50px);
     margin-left: rem(50px);
+    p {
+        width: 100%;
+    }
     @include phones {
         width: rem(180px);
         margin-left: rem(30px);
