@@ -10,9 +10,21 @@
   font-family: 'Lifehack';
   src: url("../fonts/Lifehack Medium.woff"); }
 
-body, ul, p, h1, h2, h3, h4, h5, h6 {
+html, body, ul, p, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0; }
+
+html, body {
+  height: 100%; }
+
+.main {
+  height: 100%;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  -o-transition: transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  will-change: transform; }
 
 ul {
   list-style: none; }
@@ -31,12 +43,13 @@ a {
 
 .wrapper {
   width: 100%;
+  height: 100%;
   overflow: hidden;
   position: relative; }
 
 .section {
   min-height: 650px;
-  height: 100vh;
+  height: 100%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   position: relative;
@@ -503,6 +516,7 @@ a {
   height: 100%;
   width: 100%;
   white-space: nowrap;
+  font-size: 0;
   position: absolute;
   top: 0;
   left: 0; }
@@ -510,7 +524,6 @@ a {
 .slider__item {
   height: 100%;
   display: inline-block;
-  font-size: 0;
   white-space: normal; }
 
 .slider__left {
@@ -531,7 +544,7 @@ a {
   -webkit-transform: translate(-50%, 50%);
   -ms-transform: translate(-50%, 50%);
   transform: translate(-50%, 50%);
-  max-width: 100%;
+  max-width: 95%;
   max-height: 100%; }
   @media screen and (max-width: 768px) {
     .slider__pic {
@@ -871,23 +884,9 @@ a {
 
 .acco__item {
   margin-bottom: 2.1875rem; }
-  .acco__item:hover .acco__title::before {
-    -webkit-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    transform: rotate(180deg);
-    -webkit-transition: .5s;
-    -o-transition: .5s;
-    transition: .5s; }
-  .acco__item:hover .acco__content {
-    height: 6.25rem;
-    -webkit-transition: height .5s;
-    -o-transition: height .5s;
-    transition: height .5s; }
-    @media screen and (max-width: 768px) {
-      .acco__item:hover .acco__content {
-        height: 15rem; } }
-  .acco__item:hover h2 {
-    color: #f9b43b; }
+
+.acco__item-active .acco__title {
+  color: #f9b43b; }
 
 .acco__title {
   height: 1.75rem;
@@ -902,16 +901,6 @@ a {
   font: 0.875rem "Gagalin";
   line-height: 1.75rem;
   color: #fff; }
-  .acco__title::before {
-    content: '';
-    display: block;
-    height: 0.4375rem;
-    width: 0.5625rem;
-    background: url("../image/icons/triangle.svg") no-repeat;
-    margin-right: 0.625rem;
-    -webkit-transition: .5s;
-    -o-transition: .5s;
-    transition: .5s; }
   @media screen and (max-width: 768px) {
     .acco__title {
       -webkit-box-pack: center;
@@ -919,12 +908,27 @@ a {
       -ms-flex-pack: center;
       justify-content: center; } }
 
+.acco__triangle {
+  height: 7px;
+  width: 9px;
+  background: url("../image/icons/triangle.svg") no-repeat;
+  background-size: 100%;
+  margin-right: 1.25rem;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s; }
+
+.acco__item-active .acco__triangle {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s; }
+
 .acco__content {
-  height: 0;
+  display: none;
   overflow: hidden;
-  -webkit-transition: height .5s;
-  -o-transition: height .5s;
-  transition: height .5s;
   margin-top: 0.9375rem; }
 
 .acco__pic {
@@ -938,6 +942,10 @@ a {
     .acco__pic {
       float: none;
       margin: auto; } }
+
+.acco__img {
+  max-width: 100%;
+  max-height: 100%; }
 
 .acco h3 {
   font: bold 0.875rem "Ubuntu";
@@ -983,31 +991,18 @@ a {
   position: absolute;
   right: 0;
   height: 100%;
-  width: 50%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end; }
+  width: 50%; }
   @media screen and (max-width: 768px) {
     .acco-vertical {
       width: 100%; } }
 
 .acco-vertical__item {
+  float: right;
+  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex;
-  -webkit-transition: .7s;
-  -o-transition: .7s;
-  transition: .7s;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end; }
+  display: flex; }
   .acco-vertical__item:nth-child(1) .acco-vertical__item-container::after {
     background: url("../image/meat-menu.png") center no-repeat;
     background-size: cover; }
@@ -1017,22 +1012,9 @@ a {
   .acco-vertical__item:nth-child(3) .acco-vertical__item-container::after {
     background: url("../image/diet-menu.png") center no-repeat;
     background-size: cover; }
-  .acco-vertical__item:hover {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    -webkit-transition: .7s;
-    -o-transition: .7s;
-    transition: .7s; }
-    .acco-vertical__item:hover .acco-vertical__content {
-      -webkit-box-flex: 1;
-      -webkit-flex: 1;
-      -ms-flex: 1;
-      flex: 1; }
-    .acco-vertical__item:hover .acco-vertical__item-container::after {
-      -webkit-filter: brightness(100%);
-      filter: brightness(100%); }
+  .acco-vertical__item:hover .acco-vertical__item-container::after {
+    -webkit-filter: brightness(100%);
+    filter: brightness(100%); }
 
 .acco-vertical__item-container {
   width: 5rem;
@@ -1065,9 +1047,6 @@ a {
   overflow: hidden;
   background-color: #2e3133;
   opacity: .9;
-  -webkit-transition: .7s;
-  -o-transition: .7s;
-  transition: .7s;
   font: 0.875rem "Ubuntu";
   line-height: 1.5rem;
   color: #fff; }
