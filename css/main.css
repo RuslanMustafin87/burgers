@@ -1305,13 +1305,14 @@ a {
 
 .map {
   position: relative;
-  background: url("../image/map.png") center no-repeat;
-  background-size: cover;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
-  flex-grow: 1;
-  position: relative; }
+  flex-grow: 1; }
+
+.map__container {
+  width: 100%;
+  height: 100%; }
 
 .footer {
   position: absolute;
