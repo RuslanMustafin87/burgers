@@ -217,3 +217,21 @@ linkModal.on('click', function(){
         modalTitle.text(titleHoverContainer);
         modalText.text(textHoverContainer);
 });
+
+//форма
+
+$('#order-form').on('submit', function(event){
+    event.preventDefault();
+    
+    var form = $(this),
+        url = form.attr('action'),
+        data = form.serialize();
+    
+    var request = $.ajax({
+        type: 'POST',
+        url: url,
+        data: data,
+        dataType: 'JSON'
+    });
+
+})
