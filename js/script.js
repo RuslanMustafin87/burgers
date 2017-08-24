@@ -181,7 +181,7 @@ function init(){
     ],
         myCollection = new ymaps.GeoObjectCollection({}, {
             iconLayout: 'default#image',
-            iconImageHref: '../image/icons/map-marker.svg',
+            iconImageHref: 'image/icons/map-marker.svg',
             iconImageSize: [50, 72],
             iconImageOffset: [-3, -42]
         });
@@ -199,3 +199,21 @@ $('label').on('click', function(){
     $('.form__input', this).focus();
 })
 
+//модальное окно
+
+$('[data-fancybox]').fancybox({
+
+})
+
+var linkModal = $('[data-fancybox]');
+
+linkModal.on('click', function(){
+    var $this = $(this),
+        titleHoverContainer = ($this.siblings('.reviews__title')).text(),
+        textHoverContainer = ($this.siblings('.reviews__text')).text(),
+        modalTitle = $('.modal__title'),
+        modalText = $('.modal__text');
+
+        modalTitle.text(titleHoverContainer);
+        modalText.text(textHoverContainer);
+});
