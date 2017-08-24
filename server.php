@@ -13,7 +13,26 @@
     $call = $_POST['call'];
     $call = isset($call) ? 'НЕТ' : 'ДА';
     
-    $mail_message = 'привет';
+    $mail_message = '<html>
+    <head>
+        <title>Заявка</title>
+    </head>
+    <body>
+        <h2>Заказ</h2>
+        <ul>
+            <li>Имя: ' . $name . '</li>
+            <li>Телефон: ' . $tel . '</li>
+            <li>Улица: ' . $street . '</li>
+            <li>Дом: ' . $house . '</li>
+            <li>Корпус: ' . $corpus . '</li>
+            <li>Квартира: ' . $flat .'</li>
+            <li>Этаж: ' . $floor . '</li>
+            <li>Комментарии: ' . $comments . '</li>
+            <li>Оплата: ' . $payment . '</li>
+            <li>Звонок: ' . $call . '</li>
+        </ul>
+    </body>
+</html> ';
 
     $headers = "From: Администратор сайта <ruslanmust87@gmail.com>\r\n".
     "MIME-Version: 1.0" . "\r\n" .
