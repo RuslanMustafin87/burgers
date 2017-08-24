@@ -629,32 +629,32 @@
                             </div>
                             <div class="form-right">
                                 <label class="form__comment form__label-font">Комментарии<br>
-							<textarea class="form__input-comment form__input "></textarea>
-						</label>
+						        	<textarea class="form__input-comment form__input " name="comments"></textarea>
+						        </label>
                                 <label class="form__payment">
-							<input type="radio" name="payment" class="form__payment-input">
-                            <div class="form__payment-check"></div>
-                            <div class="form__text">
-                                <p>Потребуется сдача</p>
-                            </div>
-						</label>
+						        	<input type="radio" name="payment" class="form__payment-input" value="наличка">
+                                       <div class="form__payment-check"></div>
+                                        <div class="form__text">
+                                        <p>Потребуется сдача</p>
+                                   </div>
+					        	</label>
                                 <label class="form__payment">
-							<input type="radio" name="payment" class="form__payment-input">
-                            <div class="form__payment-check"></div>
-                            <div class="form__text">
-                                <p>Оплата по карте</p>
-                            </div>
-						</label>
-                                <label class="form__no-call">
-							<input type="checkbox" class="form__no-call-input">
-                            <div class="form__no-call-check"></div>
-                            <div class="form__text">
-                                <p>Не перезванивать</p>
-                            </div>
-						</label>
+						        	<input type="radio" name="payment" class="form__payment-input" value="карта">
+                                    <div class="form__payment-check"></div>
+                                    <div class="form__text">
+                                    <p>Оплата по карте</p>
+                                    </div>
+					        	</label>
+                                 <label class="form__no-call" >
+						         	<input type="checkbox" class="form__no-call-input" name="call" value="1">
+                                 <div class="form__no-call-check"></div>
+                                 <div class="form__text">
+                                  <p>Не перезванивать</p>
+                                </div>
+					        	</label>
                                 <div class="form__submit-block">
-                                    <input type="submit" class="form__submit" value="заказать">
-                                    <input type="reset" class="form__reset" value="Очистить">
+                                    <input type="submit" class="form__submit" name="submit" value="заказать">
+                                    <input type="reset" class="form__reset" name="reset" value="Очистить">
                                 </div>
                             </div>
                         </form>
