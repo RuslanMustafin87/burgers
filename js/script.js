@@ -110,7 +110,11 @@ var scrollMain = function(sectionEq){
     
             if (isScroll) return
             isScroll = true;
-    
+            
+            let section = sections.eq(sectionEq);
+            let scroll = section.offsetTop;
+            console.log(scroll);
+            // main.css('transform', 'translateY(-' + scroll + 'px)');
             main.css('transform', 'translateY(' + (sectionEq * -100) + '%)');
             sections.eq(sectionEq).addClass('section-active')
                 .siblings().removeClass('section-active');
