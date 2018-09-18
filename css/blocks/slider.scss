@@ -2,9 +2,9 @@
     background: linear-gradient(to bottom, #f9b43b 20%, #eb8d38 50%, #f9b43b 80%);
     display: flex;
     align-items: center;
-    @include landscape {
-        min-height: 800px;
-    }
+    // @include landscape {
+    //     min-height: 800px;
+    // }
 }
 
 .slider__block {

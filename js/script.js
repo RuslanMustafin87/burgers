@@ -155,6 +155,18 @@ $(window).swipe({
     }
 })
 
+// window.addEventListener('resize', function(){
+//     var sectionIndex = sections.filter('.section-active').index();
+//     console.log(sectionIndex);
+//     scrollMain(sectionIndex);
+// });
+
+window.onresize = function(){
+    var sectionIndex = sections.filter('.section-active').index();
+    console.log(sectionIndex);
+    scrollMain(sectionIndex);
+}
+
 //карта
 
 ymaps.ready(init);

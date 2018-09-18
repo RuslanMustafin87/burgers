@@ -1,0 +1,27 @@
+{
+  "name": "burgers",
+  "version": "1.0.0",
+  "description": "**Студент**: Мустафин Руслан",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RuslanMustafin87/burgers.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RuslanMustafin87/burgers/issues"
+  },
+  "homepage": "https://github.com/RuslanMustafin87/burgers#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-sass": "^3.1.0"
+  },
+  "dependencies": {}
+}
