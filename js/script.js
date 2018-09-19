@@ -151,6 +151,11 @@ $('[data-scroll]').on('click touchstart', function(){
 
 $(window).swipe({
     swipe: function(event, direction){
+        if (direction == 'up') {
+            direction = 'down'
+        } else {
+            direction = 'up'
+        }
         scrollDirection(direction);
     }
 })

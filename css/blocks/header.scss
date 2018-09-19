@@ -128,7 +128,7 @@
         max-width: 80%;
         max-height: 80%;
     }
-    @include phones__small{
+    @include phones{
         max-width: 70%;
     }
 }
