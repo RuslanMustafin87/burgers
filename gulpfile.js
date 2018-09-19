@@ -19,7 +19,7 @@ const notify = require('gulp-notify');
     } 
 
     function watch(){
-        gulp.watch('./**/.scss', style);
+        gulp.watch('./**/*.scss', style);
     }
 
     function serve(){
@@ -28,7 +28,7 @@ const notify = require('gulp-notify');
                 baseDir: './'
             }
         });
-        browserSync.watch('./*.{css}', browserSync.reload);
+        browserSync.watch('./**/*.{js,css}', browserSync.reload);
     };
 
     gulp.task('default', gulp.parallel(
