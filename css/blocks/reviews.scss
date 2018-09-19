@@ -1,3 +1,4 @@
+
 .reviews__list {
     height: 100%;
     @for $i from 1 through 8 {
@@ -84,6 +85,7 @@
     width: rem(110px);
     height: rem(35px);
     border-radius: rem(3px);
+    border: 0;
     background-color: $black;
     color: #fff;
     text-decoration: none;
@@ -91,7 +93,6 @@
     line-height: rem(35px);
     text-transform: uppercase;
     text-align: center;
-    vertical-align: middle;
     margin-top: rem(20px);
     @include tablets {
         margin: rem(20px) auto;
@@ -102,4 +103,31 @@
         font: rem(17px) 'Ubuntu';
         line-height: rem(45px);
     }
+}
+
+.modal {
+    width: rem(400px);
+    height: rem(300px);
+    border-radius: 5px;
+}
+
+.modal__title {
+    font: rem(14px) 'Gagalin';
+    line-height: rem(14px);
+    letter-spacing: rem(1.5px);
+    text-transform: uppercase;
+    color: $black;
+}
+
+.modal__text {
+    font: rem(14px) 'Ubuntu';
+    line-height: rem(24px);
+    color: $black;
+    margin-top: 10px;
+}
+
+.fancybox-close-small::after {
+    color: red;
+    font-size: 27px;
+    line-height: 27px;
 }

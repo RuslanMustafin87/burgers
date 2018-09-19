@@ -1,3 +1,4 @@
+
 .features {
     background: url('../image/tomato-3.png') center no-repeat;
     background-size: cover;
@@ -13,7 +14,10 @@
     line-height: rem(72px);
     color: $black;
     text-align: center;
-    margin-bottom: rem(120px);
+    
+}
+
+.features__title{
     margin-top: 0;
 }
 
@@ -23,8 +27,12 @@
     justify-content: space-between;
     padding: 0;
     width: 100%;
+    margin-top: rem(120px);
     @include phones {
         flex-direction: column;
+    };
+    @include phones__small{
+        margin-top: 1rem;
     }
 }
 

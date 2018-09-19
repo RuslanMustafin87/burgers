@@ -1,3 +1,4 @@
+
 .order {
     background: url('../image/order-bg.png') no-repeat;
     background-size: 100% 100%;
@@ -6,6 +7,15 @@
         font: rem(72px) "Gagalin";
         color: $yellow;
         text-align: center;
+        @include phones__small{
+            font-size: 3rem;
+        }
+    }
+    // @include landscape {
+    //     min-height: 750px;
+    // }
+    @include phones__small{
+        padding-top: 1rem;
     }
 }
 
@@ -20,6 +30,9 @@
     }
     @include phones {
         margin: rem(28px) auto;
+    }
+    @include phones__small{
+        margin-top: 1rem;
     }
 }
 

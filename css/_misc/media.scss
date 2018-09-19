@@ -1,3 +1,6 @@
+$tablets: 768px;
+$phones: 480px;
+
 @mixin tablets {
     @media screen and (max-width: $tablets) {
         @content;
@@ -6,6 +9,18 @@
 
 @mixin phones {
     @media screen and (max-width: $phones) {
+        @content;
+    }
+}
+
+@mixin phones__small {
+    @media screen and (max-height: 480px) {
+        @content;
+    }
+}
+
+@mixin landscape {
+    @media (orientation: landscape) {
         @content;
     }
 }
