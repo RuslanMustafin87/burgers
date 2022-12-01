@@ -3,7 +3,7 @@
     height: 100%;
     @for $i from 1 through 8 {
         li[class^="reviews__item reviews__item-bg#{$i}"] {
-            background: url('../image/photo/#{$i}.png') center no-repeat;
+            background: url('../image/photo/#{$i}.jpg') center no-repeat;
             background-size: cover;
         }
     }

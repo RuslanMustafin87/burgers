@@ -1,7 +1,8 @@
 
 .header {
     position: relative;
-    background: url("../image/video-bg.png") no-repeat;
+    background-image: url(../image/video-bg.jpg);
+    background-repeat: no-repeat;
     background-size: cover;
     -webkit-box-sizing: border-box;
     .container {

@@ -18,10 +18,9 @@
   "homepage": "https://github.com/RuslanMustafin87/burgers#readme",
   "devDependencies": {
     "browser-sync": "^2.18.13",
-    "gulp": "github:gulpjs/gulp#4.0",
-    "gulp-notify": "^3.2.0",
-    "gulp-plumber": "^1.2.0",
-    "gulp-sass": "^3.1.0"
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.56.1"
   },
   "dependencies": {}
 }

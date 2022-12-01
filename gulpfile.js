@@ -1,8 +1,8 @@
 var gulp = require('gulp'),
-    sass = require('gulp-sass'),
     browserSync = require('browser-sync').create();
-const plumber = require('gulp-plumber');
-const notify = require('gulp-notify');
+const sass = require('gulp-sass')(require('sass'));
+// const plumber = require('gulp-plumber');
+// const notify = require('gulp-notify');
 
     function style(){
         return gulp.src('./css/main.scss')
@@ -16,7 +16,7 @@ const notify = require('gulp-notify');
                 .pipe(sass().on('error', sass.logError))
                 .pipe(sass({outputStyle: 'compressed'}))
                 .pipe(gulp.dest('./css'));
-    } 
+    }
 
     function watch(){
         gulp.watch('./**/*.scss', style);
