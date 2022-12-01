@@ -1,9 +1,40 @@
 @font-face {
   font-family: 'Ubuntu';
-  src: url("../fonts/Ubuntu/Ubuntu-Regular.ttf"); }
+  src: url('../fonts/Ubuntu.woff2') format('woff2'),
+      url('../fonts/Ubuntu.woff') format('woff'),
+      url('../fonts/Ubuntu.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('../fonts/Ubuntu-Bold.woff2') format('woff2')
+      url('../fonts/Ubuntu-Bold.woff') format('woff'),
+      url('../fonts/Ubuntu-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 @font-face {
   font-family: 'Gagalin';
-  src: url("../fonts/Gagalin/Gagalin-Regular.woff"); }
+  src: url('../fonts/Gagalin-Regular.woff2') format('woff2'),
+      url('../fonts/Gagalin-Regular.woff') format('woff'),
+      url('../fonts/Gagalin-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @font-face {
   font-family: 'Lifehack';
-  src: url("../fonts/Lifehack Medium.woff"); }
+  src: url('../fonts/Lifehack-Medium.woff2') format('woff2'),
+      url('../fonts/Lifehack-Medium.woff') format('woff'),
+      url('../fonts/Lifehack-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}

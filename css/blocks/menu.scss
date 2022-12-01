@@ -85,17 +85,16 @@
     overflow: hidden;
     background-color: #2e3133;
     opacity: .9;
-    font: rem(14px) 'Ubuntu';
-    line-height: rem(24px);
-    color: #fff;
 }
 
 .acco-vertical__text {
-    width: rem(350px);
-    margin-top: rem(50px);
-    margin-left: rem(50px);
+    max-width: 21.875rem;
+    padding: 3.125rem 0.625rem 0 3.125rem;
     p {
         width: 100%;
+        font: 0.875rem 'Ubuntu';
+        line-height: rem(24px);
+        color: #fff;
     }
     @include phones {
         width: rem(180px);
