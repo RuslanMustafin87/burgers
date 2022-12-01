@@ -94,6 +94,10 @@
     @include phones{
         max-width: 70%;
     }
+    & img {
+        width: 100%;
+        height: auto;
+    }
 }
 
 .slider__consist {
