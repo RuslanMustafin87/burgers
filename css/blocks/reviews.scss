@@ -78,6 +78,9 @@
     @include phones {
         display: none;
     }
+    @include landscape{
+        display: none;
+    }
 }
 
 .reviews__button {

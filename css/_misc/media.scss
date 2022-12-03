@@ -12,15 +12,15 @@ $phones: 480px;
         @content;
     }
 }
-
+// TODO phone small
 @mixin phones__small {
     @media screen and (max-height: 480px) {
         @content;
     }
 }
-
+// TODO landscape
 @mixin landscape {
-    @media (orientation: landscape) {
+    @media (max-height: 480px) and (orientation: landscape) {
         @content;
     }
 }

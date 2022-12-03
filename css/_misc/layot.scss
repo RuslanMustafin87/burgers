@@ -48,6 +48,9 @@ a {
     @include phones {
       min-height: 0;
     }
+    @include landscape{
+      min-height: 0;
+  }
 }
 
 .container {
@@ -56,6 +59,7 @@ a {
   margin: auto;
   height: 100%;
   position: relative;
+
 }
 
 .clearfix::after {
@@ -71,4 +75,8 @@ html {
   @include phones {
     font-size: rem(11px);
   }
+  @include phones__small{
+    // font-size: 3.75rem;
+    font-size: rem(10px);
+}
 }
